@@ -17,7 +17,7 @@ module.exports = {
 
     user.email = user.email.toLowerCase();
 
-    db.user.user_create([user.name, user.email, user.password, user.photo], function(err, newUser) {
+    db.user.user_create([user.name, user.email, user.password, user.photo, user.admin], function(err, newUser) {
       if (err) {
         console.log("Registration err: ", err);
         return res.status(401).send(err);

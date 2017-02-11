@@ -29,6 +29,14 @@ angular.module("app").service("authService", function($http) {
       return response;
     });
   };
+  this.getCurrentUser = function() {
+    return $http({
+      method: 'GET',
+      url: '/api/adminHome'
+    }).then(function(response) {
+      return response;
+    });
+  };
   this.register = function(user) {
     return $http({
       method: 'POST',
