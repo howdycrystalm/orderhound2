@@ -17,7 +17,7 @@ module.exports = {
 
     user.email = user.email.toLowerCase();
 
-    db.user.user_create([user.name, user.email, user.password, user.photo, user.admin], function(err, newUser) {
+    db.user.user_create([user.name, user.email, user.password, user.photo, /*user.admin*/ true], function(err, newUser) {
       if (err) {
         console.log("Registration err: ", err);
         return res.status(401).send(err);
@@ -43,14 +43,29 @@ module.exports = {
     })
   },
 
+  // me: function(req, res, next) {
+  //   if (!req.user) {
+  //     res.status(401).send('User is not logged in');
+  //   }
+  //   var user = req.user;
+  //   delete user.password;
+  //   res.status(200).send(user);
+  // },
   me: function(req, res, next) {
-    if (!req.user) {
-      res.status(401).send('User is not logged in');
-    }
+    // If user isnt on the session, then return error status
+    if (!req.user) return res.status(401)
+        .send('current user not defined');
+
+    // Remove password for security
     var user = req.user;
-    delete user.password;
-    res.status(200).send(user);
-  },
+
+
+    delete user.password; //this blocks password from showing on front end
+
+    // Return user
+    return res.status(200)
+        .json(user);
+},
 
   update: function(req, res, next) {
     var updateUser = req.body;

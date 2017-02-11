@@ -36,6 +36,25 @@ angular.module("app").config(function($stateProvider, $urlRouterProvider) {
       }
     })
 
+    //HOME STATE
+    // .state('home', {
+    //   url: '/home',
+    //   templateUrl: './app/routes/home/home.html',
+    //   controller: 'homeCtrl',
+    //   resolve: {
+    //     user: function(authService, $state) {
+    //       return authService.getCurrentUser()
+    //         .then(function(response) {
+    //           if (!response.data.email) {
+    //             return $state.go('login');
+    //           }
+    //           return response.data
+    //         }).catch(function(err) {
+    //           $state.go('login');
+    //         });
+    //     }
+    //   }
+    // })
     //ADMIN STATE
     .state('adminHome', {
       url: '/adminHome',
@@ -55,7 +74,6 @@ angular.module("app").config(function($stateProvider, $urlRouterProvider) {
         }
       }
     })
-
   // ASSIGN OTHERWISE
   // ============================================================
   $urlRouterProvider.otherwise('/login');
