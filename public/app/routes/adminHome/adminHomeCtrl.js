@@ -5,7 +5,7 @@ angular.module("app").controller("adminHomeCtrl", function($scope, authService, 
   // VARIABLES
   // ============================================================
   $scope.user = user
-  $scope.test = "im the boss";
+  
   // FUNCTIONS
   // ============================================================
   $scope.logout = function() {

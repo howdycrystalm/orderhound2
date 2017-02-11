@@ -5,7 +5,6 @@ angular.module("app").controller("profileCtrl", function($scope, authService, us
   // VARIABLES
   // ============================================================
   $scope.user = user
-
   // FUNCTIONS
   // ============================================================
   $scope.logout = function() {
