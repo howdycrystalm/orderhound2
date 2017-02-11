@@ -33,13 +33,11 @@ var isAuthed = function(req, res, next) {
 	return next();
 };
 
-var isAdmin = function(req, res, next) {
-	if (req.user.admin) {
-		next();
-	} else {
-		return res.status(401)
-			.send();
-	}
+
+var isAdmin = function(req, res, next) { //isAdmin middleware should allow access to admin only pages
+    if (!req.isAuthenticated() || !req.user.admin) return res.status(401)
+        .send();
+    return next();
 };
 
 // Session and passport //
@@ -64,8 +62,11 @@ app.get('/api/logout', function(req, res, next) {
 app.post('/api/register', authCtrl.register);
 app.get('/api/user', authCtrl.read);
 app.get('/api/me', isAuthed, authCtrl.me);
+app.get('/api/adminHome', isAuthed, isAdmin, authCtrl.me);
 app.put('/api/user/current', isAuthed, authCtrl.update);
 
+
+// Connections //
 app.listen(config.PORT, function() {
   console.log('Listening on port ', config.PORT);
 })
