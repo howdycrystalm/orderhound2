@@ -1,5 +1,8 @@
-{{test}}
+
 we live at home {{user.name}}
 <br>
 <img src="{{user.photo}}"  alt= "user photo"/><br>
+<input type="number"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
+<button type="button" ng-click="addpo(ponum)">Add</button>
+<br>
 <button type="button" ng-click="logout()">Logout</button>
