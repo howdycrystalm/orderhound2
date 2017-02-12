@@ -5,8 +5,7 @@ angular.module('app')
 
   $scope.addpo = function (ponum) {
     homeService.addpo(ponum).then(function (response) {
-      //make a confirmation message, like checkin confirmed
-
+      alert("PO added successfully");
     })
   };
 //****************attempting to make find button *********************//
