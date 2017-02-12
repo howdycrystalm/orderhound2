@@ -10,10 +10,12 @@ var bcrypt = require('bcryptjs');
 var app = require('./../index');
 var db = app.get('db');
 
+// VERIFY PASSWORD //
 function verifyPassword(submitedPass, userPass) {
   return bcrypt.compareSync(submitedPass, userPass);
 }
 
+// RUN WHEN LOGGING IN //
 passport.use(new LocalStrategy({
   usernameField: 'email',
   passwordField: 'password'
@@ -21,19 +23,19 @@ passport.use(new LocalStrategy({
   email = email.toLowerCase();
   db.user.user_search_email([email], function(err, user) {
     user = user[0];
-
+		// if there are any errors, return the error before anything else
     if (err) {
       return done(err)
     }
-
+		// if no user is found, return false
     if (!user) {
       return done(null, false)
     }
-
+		// If user is found, check to see if passwords match. If so, return user
     if (verifyPassword(password, user.password)) {
       return done(null, user)
     }
-
+		// all is well, return successful user
     return done(null, false);
   })
 }));

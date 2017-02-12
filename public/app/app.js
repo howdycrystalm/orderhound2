@@ -1,10 +1,13 @@
-// INITILIZE APP
-// ============================================================
-var app = angular.module("app", ['ui.router']);
-// CONFIG
-// ============================================================
-angular.module("app").config(function($stateProvider, $urlRouterProvider) {
+// // INITILIZE APP
+// // ============================================================
+// var app = angular.module("app", ['ui.router']);
+// // CONFIG
+// // ============================================================
+// angular.module("app").config(function($stateProvider, $urlRouterProvider) {
 
+
+  angular.module("app", ['ui.router'])
+      .config(function($stateProvider, $urlRouterProvider) {
   // INITILIZE STATES
   // ============================================================
   $stateProvider
@@ -15,12 +18,11 @@ angular.module("app").config(function($stateProvider, $urlRouterProvider) {
       templateUrl: './app/routes/login/login.html',
       controller: 'loginCtrl'
     })
-
-    // PROFILE STATE
-    .state('profile', {
-      url: '/profile',
-      templateUrl: './app/routes/profile/profile.html',
-      controller: 'profileCtrl',
+    //HOME STATE
+    .state('home', {
+      url: '/home',
+      templateUrl: './app/routes/home/home.html',
+      controller: 'homeCtrl',
       resolve: {
         user: function(authService, $state) {
           return authService.getCurrentUser()
@@ -35,26 +37,6 @@ angular.module("app").config(function($stateProvider, $urlRouterProvider) {
         }
       }
     })
-
-    //HOME STATE
-    // .state('home', {
-    //   url: '/home',
-    //   templateUrl: './app/routes/home/home.html',
-    //   controller: 'homeCtrl',
-    //   resolve: {
-    //     user: function(authService, $state) {
-    //       return authService.getCurrentUser()
-    //         .then(function(response) {
-    //           if (!response.data.email) {
-    //             return $state.go('login');
-    //           }
-    //           return response.data
-    //         }).catch(function(err) {
-    //           $state.go('login');
-    //         });
-    //     }
-    //   }
-    // })
     //ADMIN STATE
     .state('adminHome', {
       url: '/adminHome',
