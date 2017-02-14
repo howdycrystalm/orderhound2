@@ -89,7 +89,8 @@ app.get('/api/logout', function(req, res, next) {
    ======================== */
 
 app.post('/api/');
-app.post('/api/checkin', checkinCtrl.checkin);
+app.post('/api/checkin', checkinCtrl.update_po_location);
+// app.post('/api/add-po', addPOCtrl.initial_add_po);
 app.post('/api/addUser', isAuthed, authCtrl.admin_create_user);
 app.post('/api/register', authCtrl.register);
 // app.post('/checkin', addPOCtrl.initial_add_po);
