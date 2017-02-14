@@ -15,10 +15,6 @@ angular.module("app").controller("loginCtrl", function($scope, mainService, $sta
         $scope.user.password = "";
         return alert('user could not be logged in');
       }
-      // else if (esponse.data.company) {
-      //   $scope.user.company = "";
-      //   return alert('This company is already registered.');
-      // }
       else if (response.data.admin === 'true') {
         $state.go('adminHome')
       }
