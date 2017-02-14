@@ -42,5 +42,5 @@ angular.module("app").controller("loginCtrl", function($scope, authService, $sta
     }).catch(function(err) {
       return alert("Could not register user");
     });
-};
+  };
 });

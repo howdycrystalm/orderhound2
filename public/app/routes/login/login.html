@@ -10,13 +10,13 @@
 <br>
 <h1>REGISTER</h1>
 <form ng-submit="register(newUser)">
-  company name: <input type="text" ng-model="newUser.company">
+  company name: <input type="text" ng-model="newUser.company" required/>
   <br>
-  admin name: <input type="text" ng-model="newUser.name">
+  admin name: <input type="text" ng-model="newUser.name" required/>
   <br>
-  email: <input type="email" ng-model="newUser.email">
+  email: <input type="email" ng-model="newUser.email" required/>
   <br>
-  password: <input type="password" ng-model="newUser.password">
+  password: <input type="password" ng-model="newUser.password" required/>
   <br>
   photo: <input type="text" ng-model="newUser.photo">
   <br>

@@ -39,6 +39,26 @@ angular.module("app").service("authService", function($http) {
       return response;
     });
   };
+  this.addUser = function(addUser) {
+        return $http({
+            method: 'POST',
+            url: '/api/addUser',
+            data: addUser
+        }).then(function(response) {
+            return response;
+        });
+    };
+  this.getter = function(addUser) {
+      return $http({
+          method: 'POST',
+          url: '/api/addUser',
+          data: user
+      }).then(function(response) {
+          return response;
+      });
+  };
+
+
   // this.editUser = function(id, user) {
   //   return $http({
   //     method: 'PUT',
