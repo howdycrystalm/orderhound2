@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("app").controller("adminHomeCtrl", function($scope, authService, user, $state) {
+angular.module("app").controller("adminHomeCtrl", function($scope, mainService, user, $state) {
 
   // VARIABLES
   // ============================================================
@@ -10,13 +10,13 @@ angular.module("app").controller("adminHomeCtrl", function($scope, authService, 
   // FUNCTIONS
   // ============================================================
   $scope.logout = function() {
-    authService.logout().then(function(response) {
+    mainService.logout().then(function(response) {
       $state.go('login');
     });
   };
 
   $scope.register = function(newUser) {
-    authService.register(newUser)
+    mainService.register(newUser)
     .then(function(response) {
       if (response.data !== "User created successfully!") {
         return alert("Could not register user");
@@ -28,7 +28,7 @@ angular.module("app").controller("adminHomeCtrl", function($scope, authService, 
   };
 
   // $scope.getter = function(addUser){
-  //   authService.addUser(addUser).then(function(response) {
+  //   mainService.addUser(addUser).then(function(response) {
   //     //everything that happens AFTER goes here, like clear form, $state.go
   //     if (!response.data) {
   //       alert('Unable to create user');
