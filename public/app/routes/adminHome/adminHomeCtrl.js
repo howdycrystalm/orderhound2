@@ -5,7 +5,8 @@ angular.module("app").controller("adminHomeCtrl", function($scope, authService, 
   // VARIABLES
   // ============================================================
   $scope.user = user
-  
+  $scope.obj = {};//do i need this still????
+
   // FUNCTIONS
   // ============================================================
   $scope.logout = function() {
@@ -13,6 +14,33 @@ angular.module("app").controller("adminHomeCtrl", function($scope, authService, 
       $state.go('login');
     });
   };
+
+  $scope.register = function(newUser) {
+    authService.register(newUser)
+    .then(function(response) {
+      if (response.data !== "User created successfully!") {
+        return alert("Could not register user");
+      }
+      alert(response.data);
+    }).catch(function(err) {
+      return alert("Could not register user");
+    });
+  };
+
+  // $scope.getter = function(addUser){
+  //   authService.addUser(addUser).then(function(response) {
+  //     //everything that happens AFTER goes here, like clear form, $state.go
+  //     if (!response.data) {
+  //       alert('Unable to create user');
+  //     }
+  //     else if (response.data){
+  //       alert('User Created!');
+  //       $state.reload('adminHome');
+  //     }
+  //   }).catch(function(err) {
+  //     alert('Unable to create user');
+  //   });
+  // };
 
 });
 

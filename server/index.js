@@ -26,6 +26,10 @@ var massiveServer = massive.connectSync({
   connectionString: config.MASSIVE_URI
 });
 
+var connectionString = config.MASSIVE_URI;
+var db = massive.connectSync({
+    connectionString: connectionString
+});
 app.set('db', massiveServer);
 var db = app.get('db');
 
@@ -84,13 +88,19 @@ app.get('/api/logout', function(req, res, next) {
         USER ENDPOINTS
    ======================== */
 
-app.post('/api/')
+app.post('/api/');
 app.post('/api/checkin', checkinCtrl.checkin);
-// app.post('/checkin', addPOCtrl.initial_add_po);
+app.post('/api/addUser', isAuthed, authCtrl.admin_create_user);
 app.post('/api/register', authCtrl.register);
+// app.post('/checkin', addPOCtrl.initial_add_po);
+
 app.get('/api/user', authCtrl.read);
 app.get('/api/me', isAuthed, authCtrl.me);
-app.get('/api/adminHome', isAuthed, isAdmin, authCtrl.me);
+app.get('/api/adminHome', isAuthed, authCtrl.me);
+app.get('/api/edit', isAuthed, authCtrl.edit);
+// app.get('/checkpoints', isAuthed, checkpointsCtrl.all_from_checkpoints);
+
+
 app.put('/api/user/current', isAuthed, authCtrl.update);
 
 

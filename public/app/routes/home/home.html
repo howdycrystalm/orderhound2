@@ -5,4 +5,9 @@ we live at home {{user.name}}
 <input type="number"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
 <button type="button" ng-click="addpo(ponum)">Add</button>
 <br>
+<form name=test1 ng-submit="blanklogin(blankuser)">
+  <input type="text" placeholder="Search for PO#" ng-model="table_name.po_num">
+  <button type="submit" name="button">Search</button>
+</form>
+<br>
 <button type="button" ng-click="logout()">Logout</button>

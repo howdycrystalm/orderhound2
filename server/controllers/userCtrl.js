@@ -10,6 +10,7 @@ function hashPassword(password) {
 }
 
 module.exports = {
+  //the code below should be changed so we know this is for admins. user = admin
   register: function(req, res, next) {
     var user = req.body;
 
@@ -17,7 +18,8 @@ module.exports = {
 
     user.email = user.email.toLowerCase();
 
-    db.user.user_create([user.name, user.email, user.password, user.photo, true, user.company], function(err, newUser) {
+    db.user_create([user.name, user.email, user.password, user.photo, true, user.company], function(err, newUser) {
+      user = user;
       if (err) {
         console.log("Registration err: ", err);
         return res.status(401).send(err);
@@ -25,6 +27,47 @@ module.exports = {
       res.status(200).send('User created successfully!');
     })
   },
+
+
+  admin_create_user: function(req, res, next) {
+    var user = req.body;
+    // Hash the users password for security
+    user.password = hashPassword(user.password);
+    db.admin_user_create([user.name, user.admin, user.photo, user.password, user.email, user.checkpoint], function(err, userProcessed) {
+    //db.user_create([user.name, user.email, user.password, true], function(err, user) {
+    // If err, send err
+      if (err) {
+        return res.status(500).send(err);
+      }
+      userProcessed = userProcessed[0];
+    //   if (req.body.checkPoint) {
+    //     var x = [req.body.checkPoint, userProcessed.id]
+    //     db.checkpoint_create(x, function(err, response) {
+    //     })
+    // }
+      //Send user back without password.
+      delete user.password;
+
+      res.status(200)
+        .send(userProcessed);
+    });
+  },
+
+  edit: function(req, res, next) {
+          // If user isnt on the session, then return error status
+          if (!req.user) return res.status(401)
+              .send('current user not defined');
+
+          // Remove password for security
+          var user = req.user;
+
+
+          delete user.password;
+
+          // Return user
+          return res.status(200)
+              .json(user);
+      },
 
   read: function (req, res, next) {
     var searchOptions = {

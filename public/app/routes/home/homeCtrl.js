@@ -15,6 +15,29 @@ angular.module('app')
 //
 //   })
 // };
+$scope.login = function(user) {
+  authService.login(user)
+  .then(function(response) {
+    if (!response.data) {
+      $scope.user.password = "";
+      return alert('user could not be logged in');
+    }
+    // else if (esponse.data.company) {
+    //   $scope.user.company = "";
+    //   return alert('This company is already registered.');
+    // }
+    else if (response.data.admin === 'true') {
+      $state.go('adminHome')
+    }
+    else {
+      $state.go('home')
+    }
+    console.log(response.data.admin);
+  }).catch(function(err) {
+    $scope.user.password = "";
+    alert('user could not be logged in');
+  });
+};
 
 $scope.logout = function() {
   authService.logout().then(function(response) {
