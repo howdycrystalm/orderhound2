@@ -1,5 +1,5 @@
 angular.module('app')
-.controller('homeCtrl', function ($scope, $state, authService, homeService, user) {
+.controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
 
   $scope.user = user;
 
@@ -16,7 +16,7 @@ angular.module('app')
 //   })
 // };
 $scope.login = function(user) {
-  authService.login(user)
+  mainService.login(user)
   .then(function(response) {
     if (!response.data) {
       $scope.user.password = "";
@@ -40,7 +40,7 @@ $scope.login = function(user) {
 };
 
 $scope.logout = function() {
-  authService.logout().then(function(response) {
+  mainService.logout().then(function(response) {
     $state.go('login');
   });
 };

@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("app").controller("loginCtrl", function($scope, authService, $state) {
+angular.module("app").controller("loginCtrl", function($scope, mainService, $state) {
 
   // VARIABLES
   // ============================================================
@@ -9,7 +9,7 @@ angular.module("app").controller("loginCtrl", function($scope, authService, $sta
   // FUNCTIONS
   // ============================================================
   $scope.login = function(user) {
-    authService.login(user)
+    mainService.login(user)
     .then(function(response) {
       if (!response.data) {
         $scope.user.password = "";
@@ -33,7 +33,7 @@ angular.module("app").controller("loginCtrl", function($scope, authService, $sta
   };
 
   $scope.register = function(newUser) {
-    authService.register(newUser)
+    mainService.register(newUser)
     .then(function(response) {
       if (response.data !== "User created successfully!") {
         return alert("Could not register user");
