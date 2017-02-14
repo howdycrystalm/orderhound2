@@ -90,14 +90,15 @@ app.get('/api/logout', function(req, res, next) {
 
 app.post('/api/');
 app.post('/api/checkin', checkinCtrl.checkin);
-app.post('/addUser', isAuthed, authCtrl.admin_create_user);
-
+app.post('/api/addUser', isAuthed, authCtrl.admin_create_user);
 app.post('/api/register', authCtrl.register);
 // app.post('/checkin', addPOCtrl.initial_add_po);
 
 app.get('/api/user', authCtrl.read);
 app.get('/api/me', isAuthed, authCtrl.me);
 app.get('/api/adminHome', isAuthed, authCtrl.me);
+app.get('/api/edit', isAuthed, authCtrl.edit);
+// app.get('/checkpoints', isAuthed, checkpointsCtrl.all_from_checkpoints);
 
 
 app.put('/api/user/current', isAuthed, authCtrl.update);

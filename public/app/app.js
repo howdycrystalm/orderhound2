@@ -1,12 +1,4 @@
-// // INITILIZE APP
-// // ============================================================
-// var app = angular.module("app", ['ui.router']);
-// // CONFIG
-// // ============================================================
-// angular.module("app").config(function($stateProvider, $urlRouterProvider) {
-
-
-  angular.module("app", ['ui.router'])
+  angular.module('app', ['ui.router'])
       .config(function($stateProvider, $urlRouterProvider) {
   // INITILIZE STATES
   // ============================================================
@@ -75,6 +67,30 @@
         }
       }
     })
+    //EDIT
+    .state('edit', {
+        url: '/edit',
+        controller: 'editCtrl',
+        templateUrl: 'app/states/edit/edit.html',
+        resolve: {
+            checkpoints: function(editService) {
+              return editService.checkpoints();
+            },
+            user: function(authService, $state) {
+                return authService.getCurrentUser()
+                    .then(function(response) {
+                        if (!response.data)
+                            $state.go('login');
+                        return response.data;
+                    })
+                    .catch(function(err) {
+                        $state.go('login');
+                    })
+            }
+        }
+    })
+
+
   // ASSIGN OTHERWISE
   // ============================================================
   $urlRouterProvider.otherwise('/login');
