@@ -18,7 +18,7 @@ module.exports = {
 
     user.email = user.email.toLowerCase();
 
-    db.user_create([user.name, user.email, user.password, user.photo, true, user.company], function(err, newUser) {
+    db.user.user_create([user.name, user.email, user.password, user.photo, true, user.company], function(err, newUser) {
       user = user;
       if (err) {
         console.log("Registration err: ", err);
@@ -33,7 +33,7 @@ module.exports = {
     var user = req.body;
     // Hash the users password for security
     user.password = hashPassword(user.password);
-    db.admin_user_create([user.name, user.company, user.admin, user.email, user.checkpoint, user.photo, user.password], function(err, userProcessed) {
+    db.admin.admin_user_create([user.name, user.company, user.admin, user.email, user.checkpoint, user.photo, user.password], function(err, userProcessed) {
     //db.user_create([user.name, user.email, user.password, true], function(err, user) {
     // If err, send err
       if (err) {
