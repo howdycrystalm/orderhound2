@@ -56,6 +56,25 @@
         }
       }
     })
+    //MANAGE
+    .state('manageUser', {
+      url: '/manageUser',
+      templateUrl: './app/routes/manage/manageUser.html',
+      controller: 'manageUserCtrl',
+      resolve: {
+        user: function(authService, $state) {
+          return authService.getCurrentUser()
+            .then(function(response) {
+              if (!response.data.email) {
+                return $state.go('login');
+              }
+              return response.data
+            }).catch(function(err) {
+              $state.go('login');
+            });
+        }
+      }
+    })
   // ASSIGN OTHERWISE
   // ============================================================
   $urlRouterProvider.otherwise('/login');

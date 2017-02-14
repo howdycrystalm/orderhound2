@@ -27,20 +27,20 @@ angular.module("app").controller("adminHomeCtrl", function($scope, authService, 
     });
   };
 
-  $scope.getter = function(addUser){
-    authService.addUser(addUser).then(function(response) {
-      //everything that happens AFTER goes here, like clear form, $state.go
-      if (!response.data) {
-        alert('Unable to create user');
-      }
-      else if (response.data){
-        alert('User Created!');
-        $state.reload('adminHome');
-      }
-    }).catch(function(err) {
-      alert('Unable to create user');
-    });
-  };
+  // $scope.getter = function(addUser){
+  //   authService.addUser(addUser).then(function(response) {
+  //     //everything that happens AFTER goes here, like clear form, $state.go
+  //     if (!response.data) {
+  //       alert('Unable to create user');
+  //     }
+  //     else if (response.data){
+  //       alert('User Created!');
+  //       $state.reload('adminHome');
+  //     }
+  //   }).catch(function(err) {
+  //     alert('Unable to create user');
+  //   });
+  // };
 
 });
 

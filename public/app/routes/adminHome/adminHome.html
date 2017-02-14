@@ -1,27 +1,12 @@
-The Admin is {{user.name}}
+<a href=""></a>The Admin is {{user.name}}
 <br>
 <img src="{{user.photo}}"  alt= "user photo"/><br>
 
-
-<h1>Make New User</h1>
-
-  user name: <input type="text" ng-model="obj.name" required/>
-  <br>
-  email: <input type="email" ng-model="obj.email" required/>
-  <br>
-  password: <input type="password" ng-model="obj.password" required/>
-  <br>
-  checkpoint: <input type="text" ng-model="obj.checkpoint" required/>
-  <br>
-  photo: <input type="text" ng-model="obj.photo">
-  <br>
-  Make Admin: <input type="checkbox" ng-model="obj.admin"/>
-  <br>
-  <a href="/" type="button" ng-click="getter(obj)">Make User</a>
-</form>
-<br>
-<br>
-
-
-
+<h1>Make accordian Menu here</h1>
+<ul>
+  <li><a href="">Search PO#</a></li>
+  <li><a ui-sref="manageUser">Make New User</a></li>
+  <li><a href="">Delete PO#</a></li></li>
+  <li><a href="">Edit User</a></li>
+</ul>
 <button type="button" ng-click="logout()">Logout</button>
