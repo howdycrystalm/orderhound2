@@ -57,7 +57,16 @@ angular.module("app").service("mainService", function($http) {
           return response;
       });
   };
-
+////////////////////////////////////////////
+  // this.getpo = function() {
+  //   return $http ({
+  //     method: 'GET',
+  //     url: '/api/getpo'
+  //   }).then(function(response) {
+  //     return response.data
+  //   });
+  // };
+////////////////////////////////////////////
 
   // this.editUser = function(id, user) {
   //   return $http({
