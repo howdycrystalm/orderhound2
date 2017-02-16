@@ -1,8 +1,5 @@
 /*po has been entered in the db from a previous user/employee.
-  this updates current location of po?
-
-same as checkin_sql
-*/
+current user/employee is updating the location by adding the po*/
 
 UPDATE in_production
 SET date = $1
