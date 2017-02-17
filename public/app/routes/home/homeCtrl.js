@@ -1,8 +1,10 @@
 angular.module('app')
-.controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
+.controller('homeCtrl', function ($scope, $state, mainService, homeService, user) { //added ponum
 
   $scope.user = user;
-
+  /////////////////////
+  // $scope.poNumber = poNumber;
+  /////////////////////
   $scope.addpo = function (ponum) {
     homeService.addpo(ponum).then(function (response) {
       alert("PO added successfully");
@@ -13,6 +15,7 @@ angular.module('app')
   $scope.findpo = function (poNumber) {
     homeService.findpo(poNumber).then(function (response) {
       alert("PO found!");
+      console.log(response);
       $state.reload('home');
     })
   };

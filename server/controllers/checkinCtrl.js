@@ -29,12 +29,19 @@ module.exports = {
     })
   },
   get_po_location: function(req, res, next) {
-    db.track_po.find_po(function (err, response) {
+    db.track_po.find_po([0], function (err, response) {
       (err) ? res.send(err) : res.send('im in.')
-      // console.log(response);
+      console.log(response);
     })
   }
-
+/////////////////////////////////////////////////////////////////
+// get_po_location: function(req, res, next) {
+//   db.track_po.find_po(req.po_num, function (err, response) {
+//     (err) ? res.send(err) : res.send('im in.')
+//     console.log(response);
+//   })
+// }
+/////////////////////////////////////////////////////////////////
 
 
 };
