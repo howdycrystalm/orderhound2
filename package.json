@@ -1,7 +1,7 @@
 {
   "name": "orderhound2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Order Hound is an app that tracks purchase orders through the manufacturing processs",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/howdycrystalm/orderhound2.git"
   },
-  "author": "",
+  "author": "crystal maldonado",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/howdycrystalm/orderhound2/issues"
