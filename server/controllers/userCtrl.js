@@ -62,22 +62,22 @@ module.exports = {
   //             .json(user);
   //     },
 
-  // read: function (req, res, next) {
-  //   var searchOptions = {
-	// 		columns: ['id', 'name', 'email']
-	// 	};
-  //
-  //   db.users.find(req.query, searchOptions, function(err, users) {
-  //     if (err) {
-	// 			console.log('User read error: ', err);
-	// 			return res.status(401)
-	// 				.send(err);
-	// 		}
-  //
-	// 		res.status(200)
-	// 			.send(users);
-  //   })
-  // },
+  read: function (req, res, next) {
+    var searchOptions = {
+			columns: ['id', 'name', 'email']
+		};
+
+    db.users.find(req.query, searchOptions, function(err, users) {
+      if (err) {
+				console.log('User read error: ', err);
+				return res.status(401)
+					.send(err);
+			}
+
+			res.status(200)
+				.send(users);
+    })
+  },
   me: function(req, res, next) {
     // If user isnt on the session, then return error status
     if (!req.user) return res.status(401)

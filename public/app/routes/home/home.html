@@ -2,10 +2,15 @@
 Welcome, {{user.name}}
 <br>
 <img src="{{user.photo}}"  alt= "user photo"/><br>
+<!-- addPO button -->
 <input type="number"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
 <button type="button" ng-click="addpo(ponum)">Add</button>
 <br>
-
-<search-directive></search-directive>
-
+<!-- search for po button -->
+<input type="number"  placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber"/>
+<button type="button" ng-click="findpo(poNumber)">Find</button>
+<br>
+FOUND: {{poNumber.po_num}}
+<br>
+<br>
 <button type="button" ng-click="logout()">Logout</button>
