@@ -97,6 +97,7 @@ app.get('/api/user', authCtrl.read);
 app.get('/api/me', isAuthed, authCtrl.me);
 app.get('/api/adminHome', isAuthed, authCtrl.me);
 // app.get('/checkpoints', isAuthed, checkpointsCtrl.all_from_checkpoints);
+// app.get('/api/getpo', checkinCtrl.getpo);
 
 
 app.put('/api/user/current', isAuthed, authCtrl.update);
