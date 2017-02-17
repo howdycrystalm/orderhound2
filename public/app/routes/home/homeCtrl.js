@@ -9,6 +9,13 @@ angular.module('app')
       $state.reload('home');
     })
   };
+
+  $scope.findpo = function (poNumber) {
+    homeService.findpo(poNumber).then(function (response) {
+      alert("PO found!");
+      $state.reload('home');
+    })
+  };
 //****************attempting to make find button *********************//
 // $scope.findpo = function (findNum) {
 //   homeService.findpo(findNum).then(function (response) {
@@ -42,11 +49,11 @@ angular.module('app')
     });
   };
 
-  $scope.addpo = function (ponum) {
-    homeService.addpo(ponum).then(function (response) {
-      alert("PO added successfully");
-      $state.reload('home');
-    })
-  };
+  // $scope.addpo = function (ponum) {
+  //   homeService.addpo(ponum).then(function (response) {
+  //     alert("PO added successfully");
+  //     $state.reload('home');
+  //   })
+  // };
 
 });

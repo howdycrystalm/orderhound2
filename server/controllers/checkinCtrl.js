@@ -27,7 +27,13 @@ module.exports = {
       (err) ? res.send(err) : res.send('success!') // (err) ? is the if part, and : is the else part
 
     })
-}
+  },
+  get_po_location: function(req, res, next) {
+    db.track_po.find_po(function (err, response) {
+      (err) ? res.send(err) : res.send('im in.')
+      // console.log(response);
+    })
+  }
 
 
 
