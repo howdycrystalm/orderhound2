@@ -1,10 +1,9 @@
 angular.module('app')
-.controller('homeCtrl', function ($scope, $state, mainService, homeService, user) { //added ponum
+.controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
 
   $scope.user = user;
-  /////////////////////
-  // $scope.poNumber = poNumber;
-  /////////////////////
+  
+
   $scope.addpo = function (ponum) {
     homeService.addpo(ponum).then(function (response) {
       alert("PO added successfully");
