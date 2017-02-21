@@ -1,8 +1,10 @@
 angular.module('app')
-.controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
+// .controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
+  .controller('homeCtrl', function ($scope, $state, mainService, homeService, user, poNumber) {
 
   $scope.user = user;
-  
+  $scope.po = poNumber.data;
+  console.log($scope.po);
 
   $scope.addpo = function (ponum) {
     homeService.addpo(ponum).then(function (response) {

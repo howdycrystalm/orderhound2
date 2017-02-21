@@ -26,18 +26,11 @@
             }).catch(function(err) {
               $state.go('login');
             });
-          }
+          },
       //   //////////////////////////////////////////////////
-      //   poNumber: function(homeService, $state) {
-      //     return homeService.get_po_location()
-      //       .then(function(response) {
-      //         if (!response.data.po_num) {
-      //           return $state.go('login');
-      //         }
-      //         return response.data
-      //       })
-      //
-      //   }
+        poNumber: function(mainService, $state) {
+          return mainService.getpo();
+        }
       //   //////////////////////////////////////////////////
       }
     })

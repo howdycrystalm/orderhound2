@@ -58,14 +58,14 @@ angular.module("app").service("mainService", function($http) {
       });
   };
 ////////////////////////////////////////////
-  // this.getpo = function() {
-  //   return $http ({
-  //     method: 'GET',
-  //     url: '/api/getpo'
-  //   }).then(function(response) {
-  //     return response.data
-  //   });
-  // };
+  this.getpo = function() {
+    return $http ({
+      method: 'POST',
+      url: '/api/getpo'
+    }).then(function(response) {
+      return response;
+    });
+  };
 ////////////////////////////////////////////
 
   // this.editUser = function(id, user) {
