@@ -24,14 +24,16 @@ module.exports = {
       // })
 
 
-      (err) ? res.send(err) : res.send('success!') // (err) ? is the if part, and : is the else part
+      (err) ? res.send(err) : res.send('itsa success!') // (err) ? is the if part, and : is the else part
 
     })
   },
   get_po_location: function(req, res, next) {
-    db.track_po.find_po(function (err, response) {
-      (err) ? res.send(err) : res.send('im in.')
-      // console.log(response);
+    // db.track_po.find_po([0], function (err, response) {
+    db.track_po.find_po([req.body.po_num], function (err, response) {
+      console.log(response);
+      (err) ? res.status(400).send(err) : res.status(200).send(response)
+
     })
   }
 

@@ -26,7 +26,12 @@
             }).catch(function(err) {
               $state.go('login');
             });
+          },
+      //   //////////////////////////////////////////////////
+        poNumber: function(mainService, $state) {
+          return mainService.getpo();
         }
+      //   //////////////////////////////////////////////////
       }
     })
     //ADMIN STATE
