@@ -58,10 +58,10 @@ angular.module("app").service("mainService", function($http) {
       });
   };
 ////////////////////////////////////////////
-  this.getpo = function() {
+  this.getPo = function() {
     return $http ({
       method: 'POST',
-      url: '/api/getpo'
+      url: '/api/getPo'
     }).then(function(response) {
       return response;
     });

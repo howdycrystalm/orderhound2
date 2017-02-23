@@ -29,7 +29,7 @@
           },
       //   //////////////////////////////////////////////////
         poNumber: function(mainService, $state) {
-          return mainService.getpo();
+          return mainService.getPo();
         }
       //   //////////////////////////////////////////////////
       }
