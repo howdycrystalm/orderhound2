@@ -30,7 +30,7 @@ module.exports = {
   },
   get_po_location: function(req, res, next) {
     // db.track_po.find_po([0], function (err, response) {
-    db.track_po.find_po([req.body.po_num], function (err, response) {
+    db.track_po.find_po([req.params.poNum], function (err, response) {
       console.log(response);
       (err) ? res.status(400).send(err) : res.status(200).send(response)
 

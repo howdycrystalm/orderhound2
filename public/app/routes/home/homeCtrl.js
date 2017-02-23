@@ -3,8 +3,6 @@ angular.module('app')
   .controller('homeCtrl', function ($scope, $state, mainService, homeService, user, poNumber) {
 
   $scope.user = user;
-  $scope.po = poNumber.data;
-  console.log($scope.po);
 
   $scope.addpo = function (ponum) {
     homeService.addpo(ponum).then(function (response) {
@@ -17,6 +15,7 @@ angular.module('app')
     homeService.findpo(poNumber).then(function (response) {
       alert("PO found!");
       console.log(response);
+      $scope.mattFsesh = response;
       $state.reload('home');
     })
   };

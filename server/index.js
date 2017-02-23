@@ -91,7 +91,7 @@ app.get('/api/logout', function(req, res, next) {
 app.post('/api/');
 app.post('/api/checkin', checkinCtrl.update_po_location);
 ////////////////////////////////////////////
-app.post('/api/getPo', checkinCtrl.get_po_location);
+app.get('/api/getPo/:poNum', checkinCtrl.get_po_location);
 ///////////////////////////////////////////
 app.post('/api/addUser', isAuthed, authCtrl.admin_create_user);
 app.post('/api/register', authCtrl.register);

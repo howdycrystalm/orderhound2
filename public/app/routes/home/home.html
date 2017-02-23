@@ -7,10 +7,28 @@ Welcome, {{user.name}}
 <button type="button" ng-click="addpo(ponum)">Add</button>
 <br>
 <!-- search for po button -->
-<input type="number"  placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber"/>
+<!-- <input type="number"  placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber"/>
 <button type="button" ng-click="findpo(poNumber)">Find</button>
 <br>
 FOUND: {{poNumber.po_num}}
+<br>
+{{poNumber.employee_id}}
+{{poNumber.checkpoint_id}}
+
+<br>
+<br>
+<button type="button" ng-click="logout()">Logout</button> -->
+
+<!--matt french session -->
+<!-- search for po button -->
+<input type="number"  placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber"/>
+<button type="button" ng-click="findpo(poNumber)">Find</button>
+<br>
+FOUND: {{mattFsesh.po_num}}
+<br>
+{{mattFsesh.employee_id}}
+{{mattFsesh.checkpoint_id}}
+
 <br>
 <br>
 <button type="button" ng-click="logout()">Logout</button>
