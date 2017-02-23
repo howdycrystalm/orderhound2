@@ -1,6 +1,6 @@
 angular.module('app')
 // .controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
-  .controller('homeCtrl', function ($scope, $state, mainService, homeService, user, poNumber) {
+  .controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
 
   $scope.user = user;
 
@@ -16,7 +16,7 @@ angular.module('app')
       alert("PO found!");
       console.log(response);
       $scope.mattFsesh = response;
-      $state.reload('home');
+      $scope.poNumber = ''
     })
   };
 //****************attempting to make find button *********************//
