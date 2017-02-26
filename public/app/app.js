@@ -26,12 +26,7 @@
             }).catch(function(err) {
               $state.go('login');
             });
-          }
-      //   //////////////////////////////////////////////////
-        // poNumber: function(mainService, $state) {
-        //   return mainService.getPo();
-        // }
-      //   //////////////////////////////////////////////////
+        }
       }
     })
     //ADMIN STATE
@@ -72,25 +67,7 @@
         }
       }
     })
-    ////////////////////////////////////////////////////////
-//     .state('search2', {
-//       url: '/search2',
-//       templateUrl: './app/routes/search2/search2.html',
-//       controller: 'search2Ctrl'
-//     })
-//     .state('location', {
-//     templateUrl: './app/routes/location/location.html',
-//     controller: 'locationCtrl',
-//     url: '/location',
-//     resolve: {
-//         purchaseOrders: function(mainService, $state) {
-//             return mainService.getpo().then(function(response) {
-//                 return response;
-//             });
-//         }
-//     }
-// })
-    ////////////////////////////////////////////////////////
+
   // ASSIGN OTHERWISE
   // ============================================================
   $urlRouterProvider.otherwise('/login');

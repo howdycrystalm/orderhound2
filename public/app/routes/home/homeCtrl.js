@@ -1,5 +1,4 @@
 angular.module('app')
-// .controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
   .controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
 
   $scope.user = user;
@@ -15,17 +14,11 @@ angular.module('app')
     homeService.findpo(poNumber).then(function (response) {
       alert("PO found!");
       console.log(response);
-      $scope.mattFsesh = response;
-      $scope.poNumber = ''
+      $scope.poInfo = response;
+      $scope.poNumber = '';
     })
   };
-//****************attempting to make find button *********************//
-// $scope.findpo = function (findNum) {
-//   homeService.findpo(findNum).then(function (response) {
-//     //make a confirmation message, like checkin confirmed
-//
-//   })
-// };
+
   $scope.login = function(user) {
     mainService.login(user)
     .then(function(response) {
@@ -51,12 +44,5 @@ angular.module('app')
       $state.go('login');
     });
   };
-
-  // $scope.addpo = function (ponum) {
-  //   homeService.addpo(ponum).then(function (response) {
-  //     alert("PO added successfully");
-  //     $state.reload('home');
-  //   })
-  // };
 
 });

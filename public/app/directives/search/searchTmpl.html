@@ -6,10 +6,13 @@
 <button type="button" ng-click="logout()">Logout</button> -->
 
 
-<form ng-submit="po_search(purchaseOrders)">
-  <input type="text" placeholder="test search for PO#" ng-model="purchaseOrders.poNum">
-  <button type="submit" name="button">search</button>
-  <br>
-</form>
+<input type="number"  placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber"/>
+<button type="button" ng-click="findpo(poNumber)">Find</button>
+<br>
+FOUND: {{poInfo[0].po_num}}
+<br>
+{{poInfo[0].employee_id}}
+{{poInfo[0].checkpoint_id}}
 
-  <div ng-repeat="product in products">
+<br>
+<br>
