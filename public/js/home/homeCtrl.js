@@ -10,14 +10,14 @@ angular.module('app')
     })
   };
 
-  $scope.findpo = function (poNumber) {
-    homeService.findpo(poNumber).then(function (response) {
-      alert("PO found!");
-      console.log(response);
-      $scope.poInfo = response;
-      $scope.poNumber = '';
-    })
-  };
+  // $scope.findpo = function (poNumber) {
+  //   homeService.findpo(poNumber).then(function (response) {
+  //     alert("PO found!");
+  //     console.log(response);
+  //     $scope.poInfo = response;
+  //     $scope.poNumber = '';
+  //   })
+  // };
 
   $scope.login = function(user) {
     mainService.login(user)

@@ -1,8 +1,8 @@
 angular.module('app')
 .directive('searchDirective', function() {
   return {
-    restrict: 'AE',
-    templateUrl: './app/directives/search/searchTmpl.html',
+    restrict: 'AEC',
+    templateUrl: './routes/directives/searchTmpl.html',
     controller: 'searchCtrl'
   }
 })
