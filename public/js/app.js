@@ -7,13 +7,13 @@
     // LOGIN STATE
     .state('login', {
       url: '/login',
-      templateUrl: './app/routes/login/login.html',
+      templateUrl: './routes/login.html',
       controller: 'loginCtrl'
     })
     //HOME STATE
     .state('home', {
       url: '/home',
-      templateUrl: './app/routes/home/home.html',
+      templateUrl: './routes/home.html',
       controller: 'homeCtrl',
       resolve: {
         user: function(mainService, $state) {
@@ -32,7 +32,7 @@
     //ADMIN STATE
     .state('adminHome', {
       url: '/adminHome',
-      templateUrl: './app/routes/adminHome/adminHome.html',
+      templateUrl: './routes/adminHome.html',
       controller: 'adminHomeCtrl',
       resolve: {
         user: function(mainService, $state) {
@@ -51,7 +51,7 @@
     //MANAGE
     .state('manageUser', {
       url: '/manageUser',
-      templateUrl: './app/routes/manage/manageUser.html',
+      templateUrl: './routes/manageUser.html',
       controller: 'manageUserCtrl',
       resolve: {
         user: function(mainService, $state) {
