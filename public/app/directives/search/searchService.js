@@ -5,6 +5,7 @@ angular.module('app')
 
 // CRUD FUNCTIONS
 // ============================================================
+//finding po number from database
   this.findpo = function (poNumber) {
    return $http ({
      method: 'GET',
