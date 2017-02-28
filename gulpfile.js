@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var annotate = require('gulp-ng-annotate');
-
+// var watch = require('gulp-watch');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var cssmin = require('gulp-cssmin');
@@ -12,7 +12,7 @@ var paths = {
     jsSource: ['./public/js/**/*.js'],
     sassSource: ['./public/styles/**/*.scss'],
     indexSource: ['./public/index.html'],
-    routesSource: ['./public/routes/**/*.html'],
+    routesSource: ['./public/routes/**/*.html']
 };
 
 gulp.task('sass', function() {
@@ -21,7 +21,7 @@ gulp.task('sass', function() {
         .pipe(concat('bundle.css'))
         .pipe(cssmin())
         .pipe(rename({extname: ".min.css"}))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist'))
 });
 
 gulp.task('js', function() {
@@ -52,7 +52,7 @@ gulp.task('watch', function() {
     gulp.watch(paths.sassSource, ['sass']);
     gulp.watch(paths.indexSource, ['index']);
     gulp.watch(paths.routesSource, ['routes']);
-    gulp.watch(paths.querySource, ['queries']);
+    // gulp.watch(paths.querySource, ['queries']);
 });
 
 gulp.task('default', ['js', 'sass', 'index', 'routes', 'watch'
