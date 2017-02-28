@@ -21,7 +21,7 @@ gulp.task('sass', function() {
         .pipe(concat('bundle.css'))
         .pipe(cssmin())
         .pipe(rename({extname: ".min.css"}))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist'))
 });
 
 gulp.task('js', function() {
