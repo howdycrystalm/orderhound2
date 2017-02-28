@@ -1,0 +1,17 @@
+@mixin flex($justify: flex-start, $align: flex-start) {
+   display: flex;
+   justify-content: $justify;
+   align-items: $align;
+}
+
+@mixin wxh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin image($link) {
+  background-image: url($link);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

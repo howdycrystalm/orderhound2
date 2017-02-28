@@ -1,14 +1,14 @@
 <div class="test">
-<h1>LOGIN</h1>
-<form ng-submit="login(user)">
-  email: <input type="email" ng-model="user.email">
+  <h1>LOGIN</h1>
+  <form ng-submit="login(user)">
+    email: <input type="email" ng-model="user.email">
+    <br>
+    password: <input type="password" ng-model="user.password">
+    <br>
+    <button type="submit" name="button">login</button>
+  </form>
+  <br><hr>
   <br>
-  password: <input type="password" ng-model="user.password">
-  <br>
-  <button type="submit" name="button">login</button>
-</form>
-<br><hr>
-<br>
 </div>
 <h1>REGISTER</h1>
 <form ng-submit="register(newUser)">
