@@ -16,7 +16,7 @@ var config = require('./config');
 //initializing the app. invoking express
 var app = module.exports = express();
 
-app.use(express.static(__dirname + './../public'));
+app.use(express.static(__dirname + './../dist'));
 app.use(bodyParser.json());
 app.use(cors());
 /* ========================

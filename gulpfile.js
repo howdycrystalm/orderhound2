@@ -10,10 +10,8 @@ var htmlmin = require('gulp-htmlmin');
 var watch = require('gulp-watch');
 
 var paths = {
-    jsSource: ['./public/js/**/*.js'],
-    // jsSource: ['./public/**/*.js'],
-    // jsSource: ['./**/*.js'],
 
+    jsSource: ['./public/**/*.js'],
     sassSource: ['./public/styles/**/*.scss'],
     indexSource: ['./public/index.html'],
     routesSource: ['./public/routes/**/*.html']
@@ -63,5 +61,5 @@ gulp.task('watch', function() {
     gulp.watch(paths.routesSource, ['routes']);
 });
 
-gulp.task('default', ['js', 'sass', 'watch', 'index'
+gulp.task('default', ['js', 'sass', 'watch', 'index', 'routes'
 ]);
