@@ -1,9 +1,9 @@
-  angular.module('app', ['ui.router'])
+  angular.module('houndApp', ['ui.router'])
       .config(function($stateProvider, $urlRouterProvider) {
   // INITILIZE STATES
   // ============================================================
+  $urlRouterProvider.otherwise('/');
   $stateProvider
-
     // LOGIN STATE
     .state('login', {
       url: '/login',
@@ -70,5 +70,5 @@
 
   // ASSIGN OTHERWISE
   // ============================================================
-  $urlRouterProvider.otherwise('/login');
+
 });
