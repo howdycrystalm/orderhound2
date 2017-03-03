@@ -1,4 +1,8 @@
-angular.module('app')
+// angular.module('app')
+//   .controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
+
+
+angular.module('houndApp')
   .controller('homeCtrl', function ($scope, $state, mainService, homeService, user) {
 
   $scope.user = user;

@@ -1,6 +1,5 @@
 /*allows users to add the po, aka 'check-in' the po they're working on*/
-
-var app = require('../index')
+var app = require('./../index')
 var db = app.get('db');
 
 module.exports = {

@@ -1,6 +1,7 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("app").controller("loginCtrl", function($scope, mainService, $state) {
+// angular.module('houndApp').controller('loginCtrl', function($scope, mainService, $state) {
+angular.module('houndApp').controller('loginCtrl', function($scope, mainService, $state) {
 
   // VARIABLES
   // ============================================================

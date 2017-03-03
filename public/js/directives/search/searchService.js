@@ -1,6 +1,6 @@
 // INITILIZE SERVICE
 // ============================================================
-angular.module('app')
+angular.module('houndApp')
 .service('searchService', function ($http) {
 
 // CRUD FUNCTIONS

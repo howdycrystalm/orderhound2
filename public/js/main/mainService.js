@@ -1,6 +1,6 @@
 // INITILIZE SERVICE
 // ============================================================
-angular.module("app").service("mainService", function($http) {
+angular.module('houndApp').service('mainService', function($http) {
 
   // AUTH FUNCTIONS
   // ============================================================

@@ -1,6 +1,9 @@
 // INITILIZE SERVICE
 // ============================================================
-angular.module('app')
+// angular.module('app')
+// .service('homeService', function ($http) {
+
+angular.module('houndApp')
 .service('homeService', function ($http) {
 
 // CRUD FUNCTIONS
