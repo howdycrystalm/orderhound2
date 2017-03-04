@@ -6,7 +6,7 @@
   $stateProvider
     // LOGIN STATE
     .state('login', {
-      url: '/login',
+      url: '/',
       templateUrl: './routes/login.html',
       controller: 'loginCtrl'
     })
@@ -20,11 +20,11 @@
           return mainService.getCurrentUser()
             .then(function(response) {
               if (!response.data.email) {
-                return $state.go('login');
+                return $state.go('/');
               }
               return response.data
             }).catch(function(err) {
-              $state.go('login');
+              $state.go('/');
             });
         }
       }
@@ -39,11 +39,11 @@
           return mainService.getCurrentUser()
             .then(function(response) {
               if (!response.data.email) {
-                return $state.go('login');
+                return $state.go('/');
               }
               return response.data
             }).catch(function(err) {
-              $state.go('login');
+              $state.go('/');
             });
         }
       }
@@ -58,11 +58,11 @@
           return mainService.getCurrentUser()
             .then(function(response) {
               if (!response.data.email) {
-                return $state.go('login');
+                return $state.go('/');
               }
               return response.data
             }).catch(function(err) {
-              $state.go('login');
+              $state.go('/');
             });
         }
       }

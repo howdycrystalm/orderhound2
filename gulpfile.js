@@ -7,7 +7,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var cssmin = require('gulp-cssmin');
 var htmlmin = require('gulp-htmlmin');
-var watch = require('gulp-watch');
+// var watch = require('gulp-watch');
 
 var paths = {
 
@@ -25,13 +25,6 @@ gulp.task('sass', function() {
         .pipe(rename({extname: ".min.css"}))
         .pipe(gulp.dest('./dist'));
 });
-
-// gulp.task('sass', function () {
-//  return gulp.src(paths.sassSource)
-//    .pipe(sass())
-//    .pipe(concat('bundle.css'))
-//    .pipe(gulp.dest('./dist/css'));
-// });
 
 gulp.task('js', function() {
     return gulp.src(paths.jsSource)
