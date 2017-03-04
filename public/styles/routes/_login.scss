@@ -1,5 +1,15 @@
-
-
+.background {
+  width: 100%;
+  height: 100vh;
+@include image('../../../images/login.jpg');
+  // background-color: darkseagreen;
+}
 .test2 {
 color: tomato;
 }
+
+// .testImage {
+//   height: 50px;
+//   width: 50px;
+//   background-image:
+// }
