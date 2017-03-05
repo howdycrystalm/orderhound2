@@ -1,24 +1,24 @@
-<main class="background"><div class="testImage"><!-- ======================================================================= --><!-- <h1>LOGIN</h1>
-<form ng-submit="login(user)">
-  email: <input type="email" ng-model="user.email">
+<div class="all"><main class="background"><div class="overlay"><header class="login"><!-- <form ng-submit="login(user)"> --> <input type="email" placeholder="Email" class="input" ng-model="user.email"> <input type="password" placeholder="Password" class="input" ng-model="user.password"><!-- <button type="submit" name="button">login</button> --> <input type="submit" value="Login" class="button" ng-click="login(user)"><!-- </form> --></header><div class="container"><div class="red"></div><div class="blue"></div></div><!-- ======================================================================= --><!-- <h1>LOGIN</h1>
+  <form ng-submit="login(user)">
+    email: <input type="email" ng-model="user.email">
+    <br>
+    password: <input type="password" ng-model="user.password">
+    <br>
+    <button type="submit" name="button">login</button>
+  </form>
+  <br><hr>
   <br>
-  password: <input type="password" ng-model="user.password">
-  <br>
-  <button type="submit" name="button">login</button>
-</form>
-<br><hr>
-<br>
-<h1>REGISTER</h1>
-<form ng-submit="register(newUser)">
-  company name: <input type="text" ng-model="newUser.company" required/>
-  <br>
-  admin name: <input type="text" ng-model="newUser.name" required/>
-  <br>
-  email: <input type="email" ng-model="newUser.email" required/>
-  <br>
-  password: <input type="password" ng-model="newUser.password" required/>
-  <br>
-  photo: <input type="text" ng-model="newUser.photo">
-  <br>
-  <button type="submit" name="button">register</button>
-</form> --></div></main>
+  <h1>REGISTER</h1>
+  <form ng-submit="register(newUser)">
+    company name: <input type="text" ng-model="newUser.company" required/>
+    <br>
+    admin name: <input type="text" ng-model="newUser.name" required/>
+    <br>
+    email: <input type="email" ng-model="newUser.email" required/>
+    <br>
+    password: <input type="password" ng-model="newUser.password" required/>
+    <br>
+    photo: <input type="text" ng-model="newUser.photo">
+    <br>
+    <button type="submit" name="button">register</button>
+  </form> --></div></main></div>
