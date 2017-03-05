@@ -9,7 +9,7 @@
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, .65);
-    position: absolute;
+    position: relative;
   }
   .background {
     width: 100%;
@@ -83,13 +83,28 @@
 
   }
 
-  .red {
-    @include wxh(50%, 630px);
+  .left {
+    @include wxh(50%, 95%);
     background-color: red;
   }
 
+  .title {
+    font-family: $cursive;
+    font-size: 45px;
+    text-align: center;
+    color: $off-white;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    @include image('../../../images/logo-off-white.png');
+    @include wxh(65px, 39px);
+    margin: auto;
+  }
+
+
   .blue {
-    @include wxh(50%, 630px);
+    @include wxh(50%, 95%);
     background-color: blue;
   }
 }
