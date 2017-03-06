@@ -15,3 +15,22 @@
   background-position: center;
   background-size: cover;
 }
+
+@mixin input() {
+  @include wxh(370px, 53px);
+  outline: none;
+  border: 0px solid;
+  text-indent: 12px;
+  margin-top: 10px;
+  font-family: $font;
+  font-size: 20px;
+  background-color: $off-white;
+  color: $off-black;
+}
+
+@mixin button-maker ($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  border: 1px solid transparent;
+  font-size: 15px;
+}

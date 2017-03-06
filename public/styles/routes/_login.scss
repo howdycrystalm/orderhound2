@@ -29,48 +29,47 @@
     padding-left: 5px;
   }
 
-  .input {
+  .header-input {
     @include wxh(200px, 25px);
     font-family: $font;
     font-size: 15px;
     background-color: $off-white;
-    color: #000;
+    color: $off-black;
     border: 0px solid;
     outline: none;
     text-indent: 10px;
     margin: 10px;
   }
 
-  .input::-webkit-input-placeholder {
-  color: $green !important;
-  font-size: 12px;
+  .header-input::-webkit-input-placeholder {
+    color: $green !important;
+    font-size: 12px;
   }
 
-  .input:-moz-placeholder { /* Firefox 18- */
-  color: $green !important;
-  font-size: 12px;
+  .header-input:-moz-placeholder { /* Firefox 18- */
+    color: $green !important;
+    font-size: 12px;
   }
 
-  .input::-moz-placeholder {  /* Firefox 19+ */
-  color: $green !important;
-  font-size: 12px;
+  .header-input::-moz-placeholder {  /* Firefox 19+ */
+    color: $green !important;
+    font-size: 12px;
   }
 
-  .input:-ms-input-placeholder {
-  color: $green !important;
-  font-size: 12px;
+  .header-input:-ms-input-placeholder {
+    color: $green !important;
+    font-size: 12px;
   }
 
-  .button {
+  .header-button {
     @include wxh(80px, 35px);
-    background-color: $blue;
-    color: #fff;
-    border: 1px solid transparent;
-    font-size: 15px;
+    @include button-maker($blue, #fff);
     margin-left: 10px;
+    margin-top: 0px;
+    text-indent: 0px;
   }
 
-  .button:hover {
+  .header-button:hover {
     background-color: $lightblue;
   }
   /////////////////////////// CONTAINER ///////////////////////////
@@ -80,17 +79,19 @@
     height: 90%;
     background-color: darkseagreen;
     margin: auto;
-
   }
-
+  /////////////////////////// LEFT ///////////////////////////
   .left {
-    @include wxh(50%, 95%);
+    @include wxh(30%, 75%);
+    @include flex(center, center);
+    flex-direction: column;
     background-color: red;
+
   }
 
   .title {
     font-family: $cursive;
-    font-size: 45px;
+    font-size: 70px;
     text-align: center;
     color: $off-white;
     margin-bottom: 10px;
@@ -98,13 +99,47 @@
 
   .logo {
     @include image('../../../images/logo-off-white.png');
-    @include wxh(65px, 39px);
-    margin: auto;
+    @include wxh(100px, 58px);
   }
 
+  .description {
+    @include wxh(40%, auto);
+    font-family: $font;
+    font-size: 50px;
+    color: $off-white;
+    width: 70%;
+    line-height: 63px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
 
-  .blue {
-    @include wxh(50%, 95%);
+  /////////////////////////// RIGHT ///////////////////////////
+  .right {
+    @include wxh(30%, 95%);
+    @include flex(center, center);
+    flex-direction: column;
     background-color: blue;
+  }
+
+  .right-title {
+    font-family: $font;
+    color: $off-white;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    @include input();
+  }
+
+  button {
+    @include wxh(195px, 40px);
+    @include button-maker ($green, #fff);
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  button:hover {
+    background-color: $light-green;
   }
 }
