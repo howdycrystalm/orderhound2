@@ -1,22 +1,23 @@
 .all {
+  position: relative;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  position: relative;
+
 
   .overlay {
+    position: relative;
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, .65);
-    position: relative;
   }
   .background {
-    width: 100%;
-    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    // height: 100%;
     @include image('../../../images/login.jpg');
-    @include flex(center, center);
-    position: relative;
+    // @include flex(center, center);
   }
   /////////////////////////// LOGIN ///////////////////////////
   .login {
@@ -74,11 +75,10 @@
   }
   /////////////////////////// CONTAINER ///////////////////////////
   .container {
+    position: relative;
     @include flex(center, center);
     width: 90%;
     height: 90%;
-    background-color: darkseagreen;
-    margin: auto;
   }
   /////////////////////////// LEFT ///////////////////////////
   .left {
@@ -86,7 +86,6 @@
     @include flex(center, center);
     flex-direction: column;
     background-color: red;
-
   }
 
   .title {
@@ -100,27 +99,19 @@
   .logo {
     @include image('../../../images/logo-off-white.png');
     @include wxh(100px, 58px);
+    margin: auto;
   }
 
   .description {
-    @include wxh(40%, auto);
+    @include wxh(100%, auto);
     font-family: $font;
     font-size: 50px;
     color: $off-white;
     width: 70%;
     line-height: 63px;
-    margin: 0 auto;
-    margin-top: 60px;
   }
 
   /////////////////////////// RIGHT ///////////////////////////
-  .right {
-    @include wxh(30%, 95%);
-    @include flex(center, center);
-    flex-direction: column;
-    background-color: blue;
-  }
-
   .right-title {
     font-family: $font;
     color: $off-white;
@@ -142,4 +133,36 @@
   button:hover {
     background-color: $light-green;
   }
+
+  button:focus {
+    outline: 0;
+  }
+
+  /////////////////////////// LAYOUT ///////////////////////////
+
+  .container {
+    position: relative;
+    @include flex(center, center);
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+  }
+  .block {
+    display: inline-block;
+    @include wxh(450px, 67%);
+    margin: 50px;
+  }
+
+  .title-logo-box {
+    @include wxh(100%, 150px);
+    display: inline-block;
+  }
+
+  .description-box {
+    @include wxh(600px, auto);
+    display: inline-block;
+    margin-top: 20px;
+    padding-left: 30px;
+  }
+
 }
