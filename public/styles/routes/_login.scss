@@ -88,12 +88,13 @@
     text-align: center;
     color: $off-white;
     margin-bottom: 15px;
+    margin-right: 30px;
   }
 
   .logo {
     @include image('../../../images/logo-off-white.png');
     @include wxh(100px, 58px);
-    margin: auto;
+    margin-left: 156px;
   }
 
   .description {
@@ -104,6 +105,7 @@
     width: 92%;
     line-height: 63px;
     margin-top: 15px;
+    margin-right: 32px;
   }
   /////////////////////////// RIGHT ///////////////////////////
   .right-title {
@@ -118,7 +120,7 @@
   }
 
   button {
-    @include wxh(195px, 40px);
+    @include wxh(195px, 50px);
     @include button-maker ($green, #fff);
     font-size: 20px;
     margin-top: 25px;
@@ -143,7 +145,8 @@
 
   .block {
     display: inline-block;
-    @include wxh(auto, 62%);
+    @include wxh(440px, 445px);
+    margin-top: 20px;
     // background-color: salmon;
   }
 
