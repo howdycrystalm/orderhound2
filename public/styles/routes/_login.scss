@@ -120,7 +120,7 @@
   }
 
   button {
-    @include wxh(195px, 40px);
+    @include wxh(195px, 50px);
     @include button-maker ($green, #fff);
     font-size: 20px;
     margin-top: 25px;
@@ -145,7 +145,8 @@
 
   .block {
     display: inline-block;
-    @include wxh(440px, 440px);
+    @include wxh(440px, 445px);
+    margin-top: 20px;
     // background-color: salmon;
   }
 
