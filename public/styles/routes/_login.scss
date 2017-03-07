@@ -73,13 +73,7 @@
   .header-button:hover {
     background-color: $lightblue;
   }
-  /////////////////////////// CONTAINER ///////////////////////////
-  .container {
-    position: relative;
-    @include flex(center, center);
-    width: 90%;
-    height: 90%;
-  }
+
   /////////////////////////// LEFT ///////////////////////////
   .left {
     @include wxh(30%, 75%);
@@ -93,7 +87,7 @@
     font-size: 70px;
     text-align: center;
     color: $off-white;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .logo {
@@ -107,10 +101,10 @@
     font-family: $font;
     font-size: 50px;
     color: $off-white;
-    width: 70%;
+    width: 92%;
     line-height: 63px;
+    margin-top: 15px;
   }
-
   /////////////////////////// RIGHT ///////////////////////////
   .right-title {
     font-family: $font;
@@ -137,32 +131,33 @@
   button:focus {
     outline: 0;
   }
-
   /////////////////////////// LAYOUT ///////////////////////////
-
   .container {
     position: relative;
     @include flex(center, center);
     width: 90%;
     height: 90%;
     margin: 0 auto;
+    // background-color: darkslateblue;
   }
+
   .block {
     display: inline-block;
-    @include wxh(450px, 67%);
-    margin: 50px;
+    @include wxh(auto, 62%);
+    // background-color: salmon;
   }
 
   .title-logo-box {
-    @include wxh(100%, 150px);
+    @include wxh(100%, auto);
     display: inline-block;
+    // background: $gold;
   }
 
   .description-box {
-    @include wxh(600px, auto);
-    display: inline-block;
-    margin-top: 20px;
-    padding-left: 30px;
+    @include wxh(440px, auto);
+    @include flex(center, center);
+    margin-top: 15px;
+    // background-color: orangered;
   }
 
 }
