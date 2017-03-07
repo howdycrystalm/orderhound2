@@ -13,11 +13,11 @@
     background: rgba(0, 0, 0, .65);
   }
   .background {
-    position: relative;
-    width: 100%;
-    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    // height: 100%;
     @include image('../../../images/login.jpg');
-    @include flex(center, center);
+    // @include flex(center, center);
   }
   /////////////////////////// LOGIN ///////////////////////////
   .login {
@@ -79,7 +79,6 @@
     @include flex(center, center);
     width: 90%;
     height: 90%;
-    // background-color: darkseagreen;
   }
   /////////////////////////// LEFT ///////////////////////////
   .left {
@@ -113,19 +112,6 @@
   }
 
   /////////////////////////// RIGHT ///////////////////////////
-  .right {
-    @include wxh(30%, 95%);
-    @include flex(center, center);
-    flex-direction: column;
-    background-color: blue;
-  }
-
-  .register {
-    position: absolute;
-    width: 500px;
-    background-color: purple;
-  }
-
   .right-title {
     font-family: $font;
     color: $off-white;
@@ -148,20 +134,22 @@
     background-color: $light-green;
   }
 
-  /////////////////////////// block ///////////////////////////
+  button:focus {
+    outline: 0;
+  }
+
+  /////////////////////////// LAYOUT ///////////////////////////
 
   .container {
     position: relative;
     @include flex(center, center);
     width: 90%;
     height: 90%;
-    // background-color: seagreen;
     margin: 0 auto;
   }
   .block {
     display: inline-block;
     @include wxh(450px, 67%);
-    // border: 2px solid darkorange;
     margin: 50px;
   }
 
