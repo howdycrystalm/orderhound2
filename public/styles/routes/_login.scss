@@ -79,7 +79,7 @@
     @include flex(center, center);
     width: 90%;
     height: 90%;
-    background-color: darkseagreen;
+    // background-color: darkseagreen;
   }
   /////////////////////////// LEFT ///////////////////////////
   .left {
@@ -100,17 +100,16 @@
   .logo {
     @include image('../../../images/logo-off-white.png');
     @include wxh(100px, 58px);
+    margin: auto;
   }
 
   .description {
-    @include wxh(40%, auto);
+    @include wxh(100%, auto);
     font-family: $font;
     font-size: 50px;
     color: $off-white;
     width: 70%;
     line-height: 63px;
-    margin: 0 auto;
-    margin-top: 60px;
   }
 
   /////////////////////////// RIGHT ///////////////////////////
@@ -125,7 +124,6 @@
     position: absolute;
     width: 500px;
     background-color: purple;
-
   }
 
   .right-title {
@@ -149,4 +147,34 @@
   button:hover {
     background-color: $light-green;
   }
+
+  /////////////////////////// block ///////////////////////////
+
+  .container {
+    position: relative;
+    @include flex(center, center);
+    width: 90%;
+    height: 90%;
+    // background-color: seagreen;
+    margin: 0 auto;
+  }
+  .block {
+    display: inline-block;
+    @include wxh(450px, 67%);
+    // border: 2px solid darkorange;
+    margin: 50px;
+  }
+
+  .title-logo-box {
+    @include wxh(100%, 150px);
+    display: inline-block;
+  }
+
+  .description-box {
+    @include wxh(600px, auto);
+    display: inline-block;
+    margin-top: 20px;
+    padding-left: 30px;
+  }
+
 }
