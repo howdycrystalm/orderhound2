@@ -1,22 +1,23 @@
 .all {
+  position: relative;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  position: relative;
+
 
   .overlay {
+    position: relative;
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, .65);
-    position: relative;
   }
   .background {
+    position: relative;
     width: 100%;
     height: 100vh;
     @include image('../../../images/login.jpg');
     @include flex(center, center);
-    position: relative;
   }
   /////////////////////////// LOGIN ///////////////////////////
   .login {
@@ -74,11 +75,11 @@
   }
   /////////////////////////// CONTAINER ///////////////////////////
   .container {
+    position: relative;
     @include flex(center, center);
     width: 90%;
     height: 90%;
     background-color: darkseagreen;
-    margin: auto;
   }
   /////////////////////////// LEFT ///////////////////////////
   .left {
@@ -86,7 +87,6 @@
     @include flex(center, center);
     flex-direction: column;
     background-color: red;
-
   }
 
   .title {
@@ -119,6 +119,13 @@
     @include flex(center, center);
     flex-direction: column;
     background-color: blue;
+  }
+
+  .register {
+    position: absolute;
+    width: 500px;
+    background-color: purple;
+
   }
 
   .right-title {
