@@ -1,0 +1,34 @@
+.george {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: red;
+}
+
+.header {
+  // position: absolute;
+  @include wxh(100vw, 75px);
+  background-color: $green;
+}
+
+.welcome {
+  position: absolute;
+  @include wxh(400px, 75px);
+  @include flex(flex-start, center);
+  font-family: $font;
+  font-size: 20px;
+  color: $off-white;
+  background-color: orangered;
+}
+
+.user-photo {
+  width: 160px;
+  height: 160px;
+  padding: 0px;
+  border: 2px solid $blue;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  position: relative;
+  top: 187px;
+}
