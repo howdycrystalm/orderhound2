@@ -16,6 +16,7 @@
   background-size: cover;
 }
 
+//UNIFORM INPUT FIELDS
 @mixin input() {
   @include wxh(370px, 53px);
   outline: none;
