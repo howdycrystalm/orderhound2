@@ -75,13 +75,6 @@
   }
 
   /////////////////////////// LEFT ///////////////////////////
-  .left {
-    @include wxh(30%, 75%);
-    @include flex(center, center);
-    flex-direction: column;
-    background-color: red;
-  }
-
   .title {
     font-family: $cursive;
     font-size: 70px;
