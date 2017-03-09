@@ -15,19 +15,19 @@
       url: '/home',
       templateUrl: './routes/home.html',
       controller: 'homeCtrl',
-      resolve: {
-        user: function(mainService, $state) {
-          return mainService.getCurrentUser()
-            .then(function(response) {
-              if (!response.data.email) {
-                return $state.go('/');
-              }
-              return response.data
-            }).catch(function(err) {
-              $state.go('/');
-            });
-        }
-      }
+      // resolve: {
+      //   user: function(mainService, $state) {
+      //     return mainService.getCurrentUser()
+      //       .then(function(response) {
+      //         if (!response.data.email) {
+      //           return $state.go('/');
+      //         }
+      //         return response.data
+      //       }).catch(function(err) {
+      //         $state.go('/');
+      //       });
+      //   }
+      // }
     })
     //ADMIN STATE
     .state('adminHome', {
@@ -66,9 +66,28 @@
             });
         }
       }
+    // DIRECTIVES
+    // ============================================================
+
+    })
+    .state('header', {
+      url: '/header',
+      templateUrl: '../routes/directives/headerTmpl.html',
+      controller: 'headerCtrl',
+      resolve: {
+        user: function(mainService, $state) {
+          return mainService.getCurrentUser()
+            .then(function(response) {
+              if (!response.data.email) {
+                return $state.go('/');
+              }
+              return response.data
+            }).catch(function(err) {
+              $state.go('/');
+            });
+        }
+      }
     })
 
-  // ASSIGN OTHERWISE
-  // ============================================================
 
 });
