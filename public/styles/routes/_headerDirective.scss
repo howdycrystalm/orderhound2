@@ -1,57 +1,89 @@
-.header {
+* {
   position: relative;
-  @include wxh(100vw, 100px);
-  background-color: $green;
-  display: flex;
-  flex-direction: column;
-}
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  .header {
+    position: relative;
+    @include wxh(100vw, 100px);
+    background-color: $green;
+    display: flex;
+    flex-direction: column;
+  }
 
-.welcome {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  height: 75px;
-  // @include wxh(300px, 75px);
-  // @include flex(center, center);
-  font-family: $font;
-  font-size: 20px;
-  color: $off-white;
-  // background-color: orangered;
-  margin-left: 15px;
-}
+  .welcome {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 75px;
+    font-family: $font;
+    font-size: 20px;
+    color: $off-white;
+    // background-color: orangered;
+    margin-left: 100px;
+  }
 
-.user-photo {
-  display: inline-block;
-  width: 60px;
-  max-height: 60px;
-  border-radius: 50%;
-  margin: 0 10px 0 10px;
-  overflow: hidden;
-}
+  .user-photo {
+    display: inline-block;
+    width: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+    margin: 0 10px 0 10px;
+    overflow: hidden;
+  }
 
-.user-photo img {
-  max-width: 100%;
-}
+  .user-photo img {
+    max-width: 100%;
+  }
 
-.checkpoint {
-  width: 300px;
-  position: relative;
-  font-family: $font;
-  font-size: 15px;
-  color: $off-white;
-  background-color: $blue;
-  text-align: center;
-}
+  .checkpoint {
+    width: 300px;
+    position: relative;
+    font-family: $font;
+    font-size: 20px;
+    color: $off-white;
+    background-color: $blue;
+    text-align: center;
+  }
+    /////////////////////////// LAYOUT ///////////////////////////
+  .container {
+    display: flex;
+    flex-display: column;
+  }
 
-.bo {
-  display: flex;
-  flex-display: column;
-}
+  .break {
+    @include flex(center, center);
+    color: $off-white;
+    font-family: $font;
+    font-size: 15px;
+    margin-left: 100px;
+  }
 
-.chelsea {
-  @include flex(center, center);
-  color: $off-white;
-  font-family: $font;
-  font-size: 15px;
-  margin-left: 15px;
+  .logout {
+    position:absolute;
+    @include flex(center, center);
+    height: 100px;
+    width:200px;
+    background-color: black;
+    right: 0;
+  }
+
+  .logout-button {
+    @include wxh(80px, 35px);
+    @include button-maker($blue, #fff);
+    position: absolute;
+    right: 100px;
+    top: 32px;
+    padding-bottom: 4px;
+  }
+
+  .logout-button:hover {
+    background-color: $lightblue;
+  }
+
+  .logout-button:focus {
+    outline: 0;
+  }
+
 }
