@@ -1,0 +1,37 @@
+@mixin flex($justify: flex-start, $align: flex-start) {
+   display: flex;
+   justify-content: $justify;
+   align-items: $align;
+}
+
+@mixin wxh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin image($link) {
+  background-image: url($link);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+//UNIFORM INPUT FIELDS
+@mixin input() {
+  @include wxh(370px, 53px);
+  outline: none;
+  border: 0px solid;
+  text-indent: 12px;
+  margin-top: 10px;
+  font-family: $font;
+  font-size: 20px;
+  background-color: $off-white;
+  color: $off-black;
+}
+
+@mixin button-maker ($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  border: 1px solid transparent;
+  font-size: 15px;
+}

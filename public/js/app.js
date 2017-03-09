@@ -1,12 +1,12 @@
-  angular.module('app', ['ui.router'])
+  angular.module('houndApp', ['ui.router'])
       .config(function($stateProvider, $urlRouterProvider) {
   // INITILIZE STATES
   // ============================================================
+  $urlRouterProvider.otherwise('/');
   $stateProvider
-
     // LOGIN STATE
     .state('login', {
-      url: '/login',
+      url: '/',
       templateUrl: './routes/login.html',
       controller: 'loginCtrl'
     })
@@ -15,19 +15,19 @@
       url: '/home',
       templateUrl: './routes/home.html',
       controller: 'homeCtrl',
-      resolve: {
-        user: function(mainService, $state) {
-          return mainService.getCurrentUser()
-            .then(function(response) {
-              if (!response.data.email) {
-                return $state.go('login');
-              }
-              return response.data
-            }).catch(function(err) {
-              $state.go('login');
-            });
-        }
-      }
+      // resolve: {
+      //   user: function(mainService, $state) {
+      //     return mainService.getCurrentUser()
+      //       .then(function(response) {
+      //         if (!response.data.email) {
+      //           return $state.go('/');
+      //         }
+      //         return response.data
+      //       }).catch(function(err) {
+      //         $state.go('/');
+      //       });
+      //   }
+      // }
     })
     //ADMIN STATE
     .state('adminHome', {
@@ -39,11 +39,11 @@
           return mainService.getCurrentUser()
             .then(function(response) {
               if (!response.data.email) {
-                return $state.go('login');
+                return $state.go('/');
               }
               return response.data
             }).catch(function(err) {
-              $state.go('login');
+              $state.go('/');
             });
         }
       }
@@ -58,17 +58,36 @@
           return mainService.getCurrentUser()
             .then(function(response) {
               if (!response.data.email) {
-                return $state.go('login');
+                return $state.go('/');
               }
               return response.data
             }).catch(function(err) {
-              $state.go('login');
+              $state.go('/');
+            });
+        }
+      }
+    // DIRECTIVES
+    // ============================================================
+
+    })
+    .state('header', {
+      url: '/header',
+      templateUrl: '../routes/directives/headerTmpl.html',
+      controller: 'headerCtrl',
+      resolve: {
+        user: function(mainService, $state) {
+          return mainService.getCurrentUser()
+            .then(function(response) {
+              if (!response.data.email) {
+                return $state.go('/');
+              }
+              return response.data
+            }).catch(function(err) {
+              $state.go('/');
             });
         }
       }
     })
 
-  // ASSIGN OTHERWISE
-  // ============================================================
-  $urlRouterProvider.otherwise('/login');
+
 });

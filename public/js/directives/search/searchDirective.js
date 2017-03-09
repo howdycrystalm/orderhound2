@@ -1,4 +1,4 @@
-angular.module('app')
+angular.module('houndApp')
 .directive('searchDirective', function() {
   return {
     restrict: 'AEC',

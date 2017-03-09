@@ -1,4 +1,4 @@
-angular.module('app')
+angular.module('houndApp')
 .controller('manageUserCtrl', function($scope, $state, mainService) {
     $scope.obj = {};//do i need this still????
 

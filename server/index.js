@@ -1,22 +1,22 @@
 /* ========================
       EXTERNAL MODULES
    ======================== */
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const massive = require('massive');
-const session = require('express-session');
+var express = require('express');
+var cors = require('cors');
+var bodyParser = require('body-parser');
+var massive = require('massive');
+var session = require('express-session');
 /* ========================
            CONFIG
    ======================== */
-const config = require('./config');
+var config = require('./config');
 /* ========================
           EXPRESS
    ======================== */
 //initializing the app. invoking express
 var app = module.exports = express();
 
-app.use(express.static(__dirname + './../public'));
+app.use(express.static(__dirname + './../dist'));
 app.use(bodyParser.json());
 app.use(cors());
 /* ========================
