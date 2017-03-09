@@ -4,8 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     @include wxh(100vw, 100px);
     background-color: $green;
     display: flex;
@@ -84,6 +87,14 @@
 
   .logout-button:focus {
     outline: 0;
+  }
+
+  .cat {
+    height: 100vh;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
