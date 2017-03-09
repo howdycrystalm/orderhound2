@@ -11,9 +11,9 @@
 
 @mixin image($link) {
   background-image: url($link);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 
 //UNIFORM INPUT FIELDS
