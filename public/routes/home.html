@@ -1,13 +1,94 @@
+<div class="cat">
 <header-directive></header-directive>
 
-<!-- Welcome, {{user.name}}
-<br>
-<img src="{{user.photo}}"  alt= "user photo"/><br> -->
-<!-- addPO button -->
-<!-- <input type="number"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
-<button type="button" ng-click="addpo(ponum)">Add</button>
-<br> -->
-<!-- find po button -->
-<!-- <search-directive></search-directive>
 
-<button type="button" ng-click="logout()">Logout</button> -->
+  <!-- <header-directive></header-directive> -->
+
+    <div class="center-container">
+      <div class="title bottom-line">Add PO</div>
+      <!-- addPO button -->
+        <div class="input-container">
+          <input type="text"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
+          <button type="button" class="button" ng-click="addpo(ponum)">Add</button>
+          <br>
+        </div>
+    <!-- find po button -->
+      <search-directive></search-directive>
+    </div>
+</div>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+div.panel1 {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+div.panel2 {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Accordion</h2>
+<p>Click on the buttons to open the collapsible content.</p>
+
+<button class="accordion">Add PO</button>
+<div class="panel1">
+<input type="number"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
+<button type="button" ng-click="addpo(ponum)">Add</button>.</p>
+</div>
+
+<button class="accordion">FIND PO</button>
+<div class="panel2">
+  <p><input type="number"  placeholder="FIND" class="input-field input-po-position" ng-model="ponum"/>
+<button type="button" ng-click="addpo(ponum)">FIND PO</button></p>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  }
+}
+</script>
+
+</body>
+</html> -->

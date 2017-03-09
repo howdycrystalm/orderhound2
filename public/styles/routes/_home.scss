@@ -1,4 +1,45 @@
+* {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-body {
-  background-color: $blue;
+  .center-container {
+    position: relative;
+    @include flex(center, flex-start);
+    @include wxh(500px, 400px);
+    flex-direction: column;
+    background-color: slateblue;
+  }
+
+  .title {
+    font-family: $font;
+    font-size: 50px;
+    color: $off-white;
+  }
+
+  .bottom-line {
+    @include wxh(300px, 50px);
+    border-bottom: 2px solid $off-white;
+    margin-bottom: 50px;
+  }
+
+  .input-container {
+    @include flex(center, center);
+    @include wxh(500px, 53px);
+    background-color: tomato;
+    margin-bottom: 20px;
+  }
+
+  input {
+    @include input();
+    margin-top: 0;
+  }
+
+  .button {
+    @include wxh(100px, 100%);
+    @include button-maker($green, $off-white);
+    float: left;
+  }
 }
