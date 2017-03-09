@@ -3,6 +3,5 @@ angular.module('houndApp')
   return {
     restrict: 'AEC',
     templateUrl: './routes/directives/headerTmpl.html',
-    // controller: 'headerCtrl'
   }
 })
