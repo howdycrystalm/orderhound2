@@ -17,18 +17,19 @@
     font-family: $font;
     font-size: 50px;
     color: $off-white;
+    line-height: 40px;
   }
 
   .bottom-line {
-    @include wxh(300px, 50px);
+    @include wxh(250px, 50px);
     border-bottom: 2px solid $off-white;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
   }
 
   .input-container {
     @include flex(center, center);
     @include wxh(500px, 53px);
-    background-color: tomato;
+    // background-color: tomato;
     margin-bottom: 20px;
   }
 
@@ -38,8 +39,19 @@
   }
 
   .button {
-    @include wxh(100px, 100%);
+    @include flex(space-around, center);
+    padding: 0 15px;
+    @include wxh(133px, 100%);
     @include button-maker($green, $off-white);
+    font-size: 20px;
     float: left;
+
+  }
+  .button:hover {
+    background-color: $light-green;
+  }
+
+  .button:focus {
+    outline: 0;
   }
 }
