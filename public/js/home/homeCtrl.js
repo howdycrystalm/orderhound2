@@ -2,6 +2,8 @@ angular.module('houndApp')
   .controller('homeCtrl', function ($scope, $state, mainService, homeService, searchService, user) {
 
   $scope.user = user;
+  $scope.showModal = false;
+  $scope.showX = false;
 
 
   $scope.addpo = function (ponum) {
