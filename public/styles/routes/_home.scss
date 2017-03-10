@@ -10,7 +10,8 @@
     @include flex(center, flex-start);
     @include wxh(500px, 138px);
     flex-direction: column;
-    background-color: slateblue;
+    // background-color: slateblue;
+
   }
 
   .title {
@@ -31,6 +32,8 @@
     @include wxh(500px, 53px);
     // background-color: tomato;
     margin-bottom: 20px;
+    overflow: hidden;
+    display: inline-flex;
   }
 
   input {
@@ -38,14 +41,19 @@
     margin-top: 0;
   }
 
+  i {
+    font-size: 28px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    margin-left: 14px;
+  }
+
   .button {
-    @include flex(space-around, center);
-    padding: 0 15px;
+    display: inline-block;
     width: 130px;
     @include button-maker($green, $off-white);
     font-size: 20px;
-    float: left;
-
+    padding-left: 14px;
   }
   .button:hover {
     background-color: $light-green;
@@ -54,7 +62,7 @@
   .button:focus {
     outline: 0;
   }
-/////////////////////////// ACCORDION ///////////////////////////
+//********************************** ACCORDIAN **********************************//
   button.accordion {
     color: $dark-grey ;
     background-color: transparent;
@@ -76,7 +84,7 @@
   }
 
   .panel {
-    background-color: #1EB11E;;
+    background-color: $off-white;
     max-height: 0;
     overflow: hidden;
     display: inline-flex;
