@@ -14,9 +14,30 @@
         </div>
     <!-- find po button -->
       <search-directive></search-directive>
+      <button class="accordion">FIND PO</button>
+<div class="panel">
+  <p><input type="text"  placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber"/>
+  <button type="button" ng-click="findpo(poNumber)">Find</button></p>
+</div>
     </div>
 </div>
 
+<!-- <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  }
+}
+</script> -->
 <!-- <!DOCTYPE html>
 <html>
 <head>

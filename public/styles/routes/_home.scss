@@ -54,4 +54,33 @@
   .button:focus {
     outline: 0;
   }
+/////////////////////////// ACCORDION ///////////////////////////
+  button.accordion {
+    color: #EFE9E9 ;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 18px;
+    width: 250px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.2s;
+    @include wxh(250px, 50px);
+    border-bottom: 2px solid $off-white;
+    margin-bottom: 15px;
+  }
+
+  button.accordion.active, button.accordion:hover {
+    color: $green;
+    background: $off-white;
+  }
+  div.panel {
+    padding: 0 18px;
+    background-color: #1EB11E;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 }
