@@ -42,7 +42,7 @@ angular.module('houndApp')
 /////////////////////////// SEARCH ///////////////////////////
   $scope.findpo = function (poNumber) {
     searchService.findpo(poNumber).then(function (response) {
-      alert("PO found!");
+      // alert("PO found!");
       console.log(response);
       $scope.poInfo = response;
       $scope.poNumber = '';

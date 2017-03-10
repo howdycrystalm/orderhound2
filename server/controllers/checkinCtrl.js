@@ -7,7 +7,7 @@ module.exports = {
 
     var date = new Date(); //format when have time
     // console.log(Number(req.body.ponumber))
-    db.track_po.initial_add_po([date, Number(req.body.ponumber), req.user.name, req.user.checkpoint], function (err, response) {//gets from homeService.js
+    db.track_po.initial_add_po([date, Number(req.body.ponumber), req.user.name, req.user.checkpoint, req.user.photo], function (err, response) {//gets from homeService.js
 
       // db.doespoexist([Number(req.body.ponumber)], function (err, response) {//gets from homeService.js
       //   //if it exists, update base on parameters
