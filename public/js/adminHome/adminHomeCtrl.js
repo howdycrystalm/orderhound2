@@ -1,11 +1,10 @@
 // INITILIZE CONTROLLER
 // ============================================================
-// angular.module("app").controller("adminHomeCtrl", function($scope, mainService, user, $state) {
 angular.module('houndApp').controller('adminHomeCtrl', function($scope, mainService, user, $state) {
 
   // VARIABLES
   // ============================================================
-  $scope.user = user
+  $scope.user = user;
   $scope.obj = {};//do i need this still????
 
   // FUNCTIONS

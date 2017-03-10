@@ -11,14 +11,12 @@ function hashPassword(password) {
 }
 
 module.exports = {
-  //the code below should be changed so we know this is for admins. user = admin
+  //remember user is admin
   register: function(req, res, next) {
     var user = req.body;
-
     user.password = hashPassword(user.password);
-
     user.email = user.email.toLowerCase();
-
+    //creates admin when new user registers on login page
     db.user.user_create([user.name, user.email, user.password, user.photo, true, user.company], function(err, newUser) {
       user = user;
       if (err) {
@@ -29,14 +27,12 @@ module.exports = {
     })
   },
 
-
+  //admin is creating a user within their company
   admin_create_user: function(req, res, next) {
     var user = req.body;
     // Hash the users password for security
     user.password = hashPassword(user.password);
     db.admin.admin_user_create([user.name, user.company, user.admin, user.email, user.checkpoint, user.photo, user.password], function(err, userProcessed) {
-    //db.user_create([user.name, user.email, user.password, true], function(err, user) {
-    // If err, send err
       if (err) {
         return res.status(500).send(err);
       }
