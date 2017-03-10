@@ -41,6 +41,9 @@ $stateProvider
             if (!response.data.email) {
               return $state.go('/');
             }
+            else if (!response.data.admin) {
+              return $state.go('/');
+            }
             return response.data
           }).catch(function(err) {
             $state.go('/');
