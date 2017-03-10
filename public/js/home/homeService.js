@@ -21,5 +21,14 @@ angular.module('houndApp')
       return response.data;
     });
  };
+//searching po number in database and returning data
+ this.findpo = function (poNumber) {
+  return $http ({
+    method: 'GET',
+    url: '/api/getPo/' + poNumber
+   }).then(function (response) { //this will pretty much be the same for all of my service functions
+    return response.data;
+   });
+ };
 
 });

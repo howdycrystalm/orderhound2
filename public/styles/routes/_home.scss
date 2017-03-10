@@ -8,7 +8,7 @@
   .center-container {
     position: relative;
     @include flex(center, flex-start);
-    @include wxh(500px, 400px);
+    @include wxh(500px, 138px);
     flex-direction: column;
     background-color: slateblue;
   }
@@ -41,7 +41,7 @@
   .button {
     @include flex(space-around, center);
     padding: 0 15px;
-    @include wxh(133px, 100%);
+    width: 130px;
     @include button-maker($green, $off-white);
     font-size: 20px;
     float: left;
@@ -56,31 +56,32 @@
   }
 /////////////////////////// ACCORDION ///////////////////////////
   button.accordion {
-    color: #EFE9E9 ;
+    color: $dark-grey ;
     background-color: transparent;
     cursor: pointer;
-    padding: 18px;
     width: 250px;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 20px;
+    font-size: 50px;
     transition: 0.2s;
     @include wxh(250px, 50px);
     border-bottom: 2px solid $off-white;
     margin-bottom: 15px;
+    line-height: 48px;
   }
 
   button.accordion.active, button.accordion:hover {
     color: $green;
-    background: $off-white;
   }
-  div.panel {
-    padding: 0 18px;
-    background-color: #1EB11E;
+
+  .panel {
+    background-color: #1EB11E;;
     max-height: 0;
     overflow: hidden;
+    display: inline-flex;
     transition: max-height 0.2s ease-out;
-}
+  }
+
 
 }
