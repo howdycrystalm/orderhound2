@@ -196,6 +196,15 @@
     @include flex(center, center);
   }
 
+  .employee_photo {
+    display: inline-block;
+    width: 125px;
+    max-height: 125px;
+    border-radius: 50%;
+    margin: 0 10px 0 10px;
+    overflow: hidden;
+  }
+
 
 
 }
