@@ -96,11 +96,14 @@
 
   .modal-bg {
     display: none;
-    position: fixed;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, .85);
-    top: 0px;
-    @include wxh(100%, 100vh);
+
     @include flex(center, center);
     flex-direction: column;
   }
@@ -109,7 +112,7 @@
     z-index: 3;
     width: 2px;
     height: 50px;
-    background-color: #fff;
+    background-color: $off-white;
     position: absolute;
     cursor: pointer;
     transform: rotate(45deg);
@@ -119,7 +122,7 @@
     z-index: 4;
     width: 2px;
     height: 50px;
-    background-color: #fff;
+    background-color: $off-white;
     position: absolute;
     cursor: pointer;
     transform: rotate(-45deg);
@@ -164,7 +167,7 @@
   //HEADER
   .modal-header {
       padding: 30px;
-      background-color: #fff;
+      background-color: $off-white;
       color: #000;
       font-family: $font;
       font-weight:bold;
@@ -180,71 +183,19 @@
     font-size: 15px;
     text-align: center;
     line-height: 23px;
-    border-bottom: 2px solid #f8f8f8;
-    border-top: 2px solid #f8f8f8;
-    background: #fff;
+    border-bottom: 2px solid blue;
+    border-top: 2px solid blue;
+    background: $off-white;
     padding: 30px;
   }
 
   //FOOTER
   .modal-footer {
     padding: 30px;
-    background-color: #fff;
+    background-color: $gold;
     @include flex(center, center);
   }
 
-  .button {
-    @include wxh(120px, 45px);
-    @include flex(center, center);
-    font-family: $font;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    letter-spacing: .1em;
-    border-radius: 5px;
-    border-width: 2px;
-    white-space: normal;
-    margin: 2px;
-    cursor: none;
-    outline: 0;
-  }
-
-  .cancel {
-    background-color: #5cb85c;
-    color: #fff;
-    border-color: #4cae4c;
-    border-style: solid;
-  }
-
-  .cancel:hover {
-    background-color: #80c780;
-    color: #fff;
-    border-color: #6ec06e;
-    border-style: solid;
-
-  }
-
-  .login {
-    background-color: #fff;
-    color: $blue;
-    border-color: $blue;
-    border-style: solid;
-
-  }
-
-  .login:hover {
-    color: #03b8ff;
-    border-color: #03b8ff;
-    border-style: solid;
-
-  }
-
-  .ham-to-x {
-    @include wxh(50px, 50px);
-    background-color: red;
-  }
 
 
 }
