@@ -3,7 +3,7 @@ angular.module('houndApp')
 
   $scope.user = user;
   $scope.showModal = false;
-  $scope.showX = false;
+  $scope.showX = false; /* need? */
 
 
   $scope.addpo = function (ponum) {
@@ -39,7 +39,7 @@ angular.module('houndApp')
     });
   };
 
-/////////////////////////// SEARCH ///////////////////////////
+//********************************** SEARCH **********************************//
   $scope.findpo = function (poNumber) {
     searchService.findpo(poNumber).then(function (response) {
       // alert("PO found!");
@@ -49,7 +49,7 @@ angular.module('houndApp')
     })
   };
 
-/////////////////////////// ACCORDION ///////////////////////////
+//********************************** ACCORDIAN **********************************//
   var acc = document.getElementsByClassName("accordion");
   var i;
 
