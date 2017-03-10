@@ -2,6 +2,8 @@ angular.module('houndApp')
   .controller('homeCtrl', function ($scope, $state, mainService, homeService, searchService, user) {
 
   $scope.user = user;
+  $scope.showModal = false;
+  $scope.showX = false;
 
 
   $scope.addpo = function (ponum) {
@@ -40,7 +42,7 @@ angular.module('houndApp')
 /////////////////////////// SEARCH ///////////////////////////
   $scope.findpo = function (poNumber) {
     searchService.findpo(poNumber).then(function (response) {
-      alert("PO found!");
+      // alert("PO found!");
       console.log(response);
       $scope.poInfo = response;
       $scope.poNumber = '';

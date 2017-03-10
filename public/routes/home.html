@@ -14,11 +14,41 @@
       <button class="accordion">Find PO</button>
         <div class="panel">
           <input type="text"  placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber"/>
-          <button type="button" class="button" ng-click="findpo(poNumber)">Find<i class="material-icons" style="font-size:32px;">search</i></button>
+          <button type="button" class="button" ng-click="findpo(poNumber); showModal=!showModal">Find<i class="material-icons" style="font-size:32px;">search</i></button>
         </div>
     </div>
     FOUND: {{poInfo[0].po_num}}
     <br>
     {{poInfo[0].employee_id}}
     {{poInfo[0].checkpoint_id}}
+    <!-- ********************* MODAL *******************-->
+    <!-- MODAL -->
+  <div class="modal-bg" ng-show="showModal">
+    <!-- MODAL CONTENTS -->
+    <div>
+    <div class="close-container">
+      <div class="x-box" ng-click="showModal=!showModal">
+        <span class="right"></span>
+        <span class="left"></span>
+      </div>
+    </div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>PO# {{poInfo[0].po_num}} is at {{poInfo[0].checkpoint_id}} checkpoint with user {{poInfo[0].employee_id}}.</h2>
+        <br>
+        {{poInfo[0].date}}
+      </div>
+      <div class="modal-body">
+        <div class="employee-photo">
+          <img src={{poInfo[0].employee_photo}} alt="user photo"/>
+        </div>
+        <br>
+        {{poInfo[0].employee_id}}
+        {{poInfo[0].checkpoint_id}}
+
+      </div>
+    </div>
+</div>
+</div>
+
 </div>
