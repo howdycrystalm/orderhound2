@@ -42,7 +42,7 @@ angular.module('houndApp').controller('adminHomeCtrl', function($scope, mainServ
   //   });
   // };
 //********************************** ACCORDIAN **********************************//
-var acc = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName("admin-accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
