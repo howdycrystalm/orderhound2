@@ -8,28 +8,32 @@
   .center-container {
     position: relative;
     @include flex(center, flex-start);
-    @include wxh(500px, 400px);
+    @include wxh(500px, 138px);
     flex-direction: column;
-    background-color: slateblue;
+    // background-color: slateblue;
+
   }
 
   .title {
     font-family: $font;
     font-size: 50px;
     color: $off-white;
+    line-height: 40px;
   }
 
   .bottom-line {
-    @include wxh(300px, 50px);
+    @include wxh(250px, 50px);
     border-bottom: 2px solid $off-white;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
   }
 
   .input-container {
     @include flex(center, center);
     @include wxh(500px, 53px);
-    background-color: tomato;
+    // background-color: tomato;
     margin-bottom: 20px;
+    overflow: hidden;
+    display: inline-flex;
   }
 
   input {
@@ -37,9 +41,55 @@
     margin-top: 0;
   }
 
-  .button {
-    @include wxh(100px, 100%);
-    @include button-maker($green, $off-white);
-    float: left;
+  i {
+    font-size: 28px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    margin-left: 14px;
   }
+
+  .button {
+    display: inline-block;
+    width: 130px;
+    @include button-maker($green, $off-white);
+    font-size: 20px;
+    padding-left: 14px;
+  }
+  .button:hover {
+    background-color: $light-green;
+  }
+
+  .button:focus {
+    outline: 0;
+  }
+//********************************** ACCORDIAN **********************************//
+  button.accordion {
+    color: $dark-grey ;
+    background-color: transparent;
+    cursor: pointer;
+    width: 250px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 50px;
+    transition: 0.2s;
+    @include wxh(250px, 50px);
+    border-bottom: 2px solid $off-white;
+    margin-bottom: 15px;
+    line-height: 48px;
+  }
+
+  button.accordion.active, button.accordion:hover {
+    color: $green;
+  }
+
+  .panel {
+    background-color: $off-white;
+    max-height: 0;
+    overflow: hidden;
+    display: inline-flex;
+    transition: max-height 0.2s ease-out;
+  }
+
+
 }
