@@ -1,34 +1,29 @@
-<div class="cat">
+<div class="cat" style="background-color: $blue;">
   <header-directive></header-directive>
-    <div class="center-container">
-      <!-- <button class="accordion">Section 1</button>
-        <div class="panel1">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+  <section class="center-container">
 
-      <button class="accordion">Section 2</button>
-        <div class="panel2">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+<div class="butt admin-accordion">Find PO</div>
+<div class="panel1">
+  <input type="text"  placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber"/>
+  <button type="button" class="button" ng-click="findpo(poNumber); showModal=!showModal">Find<i class="material-icons" style="font-size:32px;">search</i></button>
+</div>
 
-      <button class="accordion">Section 3</button>
-        <div class="panel2">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+<div class="butt admin-accordion">Make New User</div>
+<!-- <div class="panel2">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div> -->
 
-    </div> -->
-<a href=""></a>The Admin is {{user.name}}
+
+<div class="butt admin-accordion">Edit User</div>
+<div class="panel2">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<div class="butt admin-accordion" style="border-bottom: 1px solid #EFE9E9;">Delete PO</div>
+<div class="panel2">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 <br>
+</section>
 
-
-<h1>Make accordian Menu here</h1>
-<ul>
-  <li><a href="">Search PO#</a></li>
-  <!-- <li><a ui-sref="manageUser">Make New User</a></li> -->
-  <li><a ui-sref="manageUser">Make New User</a></li>
-  <li><a href="">Delete PO#</a></li></li>
-  <li><a href="">Edit User</a></li>
-</ul>
-<button type="button" ng-click="logout()">Logout</button>
-
+<!-- cat div -->
 </div>
