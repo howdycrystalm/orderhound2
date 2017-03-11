@@ -2,8 +2,14 @@
   height: auto;
 }
 
+.button {
+  border: 1px solid $off-white;
+  border-bottom: 0;
+}
+
 .butt.admin-accordion {
     width: 100%;
+    // background: $dark-grey;
     background: $off-black;
     color: $off-white;
     font-size: 35px;
@@ -14,26 +20,22 @@
     outline: none;
     padding: 20px;
     cursor: pointer;
-    transition: 0.2s;
+    // transition: 0.1s;
 }
 
 .butt.admin-accordion.active:first-child, .butt.admin-accordion:hover:first-child{
-
-  background-color: red;
+  background-color: $lightblue;
 }
 
 .butt.admin-accordion.active:nth-child(3), .butt.admin-accordion:hover:nth-child(3) {
-
-  background-color: blue;
+  background-color: $green;
 }
 
 .butt.admin-accordion.active:nth-child(4), .butt.admin-accordion:hover:nth-child(4) {
-
-  background-color: salmon;
+  background-color: $gold;
 }
 .butt.admin-accordion.active:nth-child(6), .butt.admin-accordion:hover:nth-child(6) {
-
-  background-color: darkseagreen;
+  background-color: $red;
 }
 
 
