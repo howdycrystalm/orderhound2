@@ -1,6 +1,7 @@
 <div class="center-of-everything">
-  <!-- <<< scss in headerDirective.scss -->
+
   <header-directive></header-directive>
+
   <div class="center-container">
     <div class="title bottom-line">Add PO</div>
     <!-- add PO button -->
@@ -18,8 +19,6 @@
       <button type="button" class="button" ng-click="findpo(poNumber); showModal=!showModal">Find<i class="material-icons" style="font-size:32px;">search</i></button>
     </div>
   </div>
-  FOUND: {{poInfo[0].po_num}}
-  <br> {{poInfo[0].employee_id}} {{poInfo[0].checkpoint_id}}
   <!-- ********************* MODAL *******************-->
   <!-- MODAL -->
   <div class="modal-bg" ng-show="showModal">
