@@ -1,257 +1,3 @@
-// .all {
-//   position: relative;
-//   -webkit-font-smoothing: antialiased;
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//
-//
-//   .overlay {
-//     position: relative;
-//     width: 100%;
-//     height: 100vh;
-//     background: rgba(0, 0, 0, .65);
-//   }
-//   .background {
-//     position: absolute;
-//     width: 100vw;
-//     // height: 100%;
-//     @include image('../../../images/login.jpg');
-//     // @include flex(center, center);
-//   }
-//   /////////////////////////// LOGIN ///////////////////////////
-//   .login {
-//     @include flex(flex-start, center);
-//     width: 550px;
-//     height: 50px;
-//     background-color: $green;
-//     color: $off-white;
-//     float: right;
-//     padding-left: 5px;
-//   }
-//
-//   .header-input {
-//     @include wxh(200px, 25px);
-//     font-family: $font;
-//     font-size: 15px;
-//     background-color: $off-white;
-//     color: $off-black;
-//     border: 0px solid;
-//     outline: none;
-//     text-indent: 10px;
-//     margin: 10px;
-//   }
-//
-//   .header-input::-webkit-input-placeholder {
-//     color: $green !important;
-//     font-size: 12px;
-//   }
-//
-//   .header-input:-moz-placeholder { /* Firefox 18- */
-//     color: $green !important;
-//     font-size: 12px;
-//   }
-//
-//   .header-input::-moz-placeholder {  /* Firefox 19+ */
-//     color: $green !important;
-//     font-size: 12px;
-//   }
-//
-//   .header-input:-ms-input-placeholder {
-//     color: $green !important;
-//     font-size: 12px;
-//   }
-//
-//   .header-button {
-//     @include wxh(80px, 35px);
-//     @include button-maker($blue, #fff);
-//     margin-left: 10px;
-//     margin-top: 0px;
-//     text-indent: 0px;
-//   }
-//
-//   .header-button:hover {
-//     background-color: $lightblue;
-//   }
-//
-//   /////////////////////////// LEFT ///////////////////////////
-//   .title {
-//     font-family: $cursive;
-//     font-size: 70px;
-//     text-align: center;
-//     color: $off-white;
-//     margin-bottom: 15px;
-//     margin-right: 30px;
-//   }
-//
-//   .logo {
-//     @include image('../../../images/logo-off-white.png');
-//     @include wxh(100px, 58px);
-//     margin-left: 156px;
-//   }
-//
-//   .description {
-//     @include wxh(100%, auto);
-//     font-family: $font;
-//     font-size: 50px;
-//     color: $off-white;
-//     width: 92%;
-//     line-height: 63px;
-//     margin-top: 15px;
-//     margin-right: 32px;
-//   }
-//   /////////////////////////// RIGHT ///////////////////////////
-//   .right-title {
-//     font-family: $font;
-//     color: $off-white;
-//     font-size: 30px;
-//     margin-bottom: 15px;
-//     margin-left: 20px;
-//   }
-//
-//   form {
-//     margin-left: 20px;
-//   }
-//
-//   input {
-//     @include input();
-//   }
-//
-//   button {
-//     @include wxh(195px, 50px);
-//     @include button-maker ($green, #fff);
-//     font-size: 20px;
-//     margin-top: 25px;
-//   }
-//
-//   button:hover {
-//     background-color: $light-green;
-//   }
-//
-//   button:focus {
-//     outline: 0;
-//   }
-//   /////////////////////////// LAYOUT ///////////////////////////
-//   .container {
-//     position: relative;
-//     @include flex(center, center);
-//     width: 90%;
-//     height: 90%;
-//     margin: 0 auto;
-//     // background-color: darkslateblue;
-//   }
-//
-//   .block-left {
-//     display: inline-block;
-//     @include wxh(auto, 445px);
-//     margin-top: 20px;
-//   }
-//
-//   .block-right {
-//     display: inline-block;
-//     @include wxh(auto, 445px);
-//     margin-top: 20px;
-//   }
-//
-//   .divider-block {
-//     display: inline-block;
-//     @include wxh(440px, 445px);
-//     width: 160px;
-//     margin: 30px;
-//     background-color: salmon;
-//   }
-//
-//   .title-logo-box {
-//     @include wxh(100%, auto);
-//     display: inline-block;
-//     // background: $gold;
-//   }
-//
-//   .description-box {
-//     @include wxh(440px, auto);
-//     @include flex(center, center);
-//     margin-top: 15px;
-//     // background-color: orangered;
-//   }
-//
-// /////////////////////////// MEDIA QUERIES ///////////////////////////
-// //RIGHT AND LEFT LAYOUTS
-//   @media (min-width: 1371px) {
-//     #more {
-//       display: none;
-//     }
-//   }
-//
-//   @media (max-width: 1370px) {
-//     #more {
-//       display: none;
-//     }
-//     .divider-block {
-//       width: 100px;
-//       margin: 20px;
-//       // background-color: red;
-//     }
-//   }
-//   @media (max-width: 1200px) {
-//     #more {
-//       display: none;
-//     }
-//     .divider-block {
-//       width: 50px;
-//       margin: 10px;
-//     }
-//   }
-//   @media (max-width: 950px) {
-//     .container {
-//       display: inline-block;
-//     }
-//
-//   //   #more {
-//   //     height: 700px;
-//   //     background-color: black;
-//   //   }
-//   //   .background {
-//   //     height: 100vh;
-//   //   }
-//   //   .container {
-//   //     position: relative;
-//   //     flex-wrap: wrap;
-//   //     @include flex(center, center);
-//   //     width: 90%;
-//   //     height: 100%;
-//   //     margin: auto;
-//   //     top: 50px;
-//   //     background-color: darkslateblue;
-//   //
-//   //   }
-//     .divider-block {
-//       display: none;
-//     }
-//   //   .title {
-//   //     margin-right: 0;
-//   //   }
-//   //   .logo {
-//   //     margin-left: 168px;
-//   //   }
-//     .block-left {
-//       background-color: green;
-//       @include flex(center, none);
-//       flex-direction: column;
-//       width: 440px;
-//     }
-//
-//     .block-right {
-//       background-color: darkblue;
-//       @include flex(center, none);
-//       flex-direction: column;
-//       width: 440px;
-//     }
-//   //   .description {
-//   //     margin-right: 0px;
-//   //   }
-//   }
-// }
-
 .all {
   position: relative;
   -webkit-font-smoothing: antialiased;
@@ -267,6 +13,7 @@
     background: rgba(0, 0, 0, .65);
   }
   .background {
+    background-color: $off-black;
     position: absolute;
     width: 100vw;
     // height: 100%;
@@ -275,12 +22,13 @@
   }
   /////////////////////////// LOGIN ///////////////////////////
   .login {
+    position: relative;
     @include flex(flex-start, center);
     width: 550px;
     height: 50px;
     background-color: $green;
     color: $off-white;
-    float: right;
+    float: right !important;
     padding-left: 5px;
   }
 
@@ -335,13 +83,13 @@
     text-align: center;
     color: $off-white;
     margin-bottom: 15px;
-    margin-right: 30px;
+    // margin-right: 30px;
   }
 
   .logo {
     @include image('../../../images/logo-off-white.png');
     @include wxh(100px, 58px);
-    margin-left: 156px;
+    margin-left: 169px;
   }
 
   .description {
@@ -352,7 +100,7 @@
     width: 92%;
     line-height: 63px;
     margin-top: 15px;
-    margin-right: 32px;
+    // margin-right: 32px;
   }
   /////////////////////////// RIGHT ///////////////////////////
   .right-title {
@@ -389,8 +137,7 @@
   .container {
     position: relative;
     @include flex(center, center);
-    width: 90%;
-    height: 90%;
+    @include wxh(90%, 90%);
     margin: 0 auto;
     // background-color: darkslateblue;
   }
@@ -412,7 +159,7 @@
     @include wxh(440px, 445px);
     width: 160px;
     margin: 30px;
-    background-color: salmon;
+    // background-color: salmon;
   }
 
   .title-logo-box {
@@ -473,52 +220,69 @@
     #vertical {
       display: inline;
     }
-    .container {
-      @include wxh(100%, 100%);
-    }
-
-  //   #more {
-  //     height: 700px;
-  //     background-color: black;
-  //   }
-  //   .background {
-  //     height: 100vh;
-  //   }
-  //   .container {
-  //     position: relative;
-  //     flex-wrap: wrap;
-  //     @include flex(center, center);
-  //     width: 90%;
-  //     height: 100%;
-  //     margin: auto;
-  //     top: 50px;
-  //     background-color: darkslateblue;
-  //
-  //   }
-    .divider-block {
-      display: none;
-    }
-  //   .title {
-  //     margin-right: 0;
-  //   }
-  //   .logo {
-  //     margin-left: 168px;
-  //   }
-    .block-left {
-      background-color: green;
-      @include flex(center, none);
-      flex-direction: column;
-      height: auto;
-
-    .block-right {
-      background-color: darkblue;
-      @include flex(center, none);
-      flex-direction: column;
-      width: 410px;
-    }
-  //   .description {
-  //     margin-right: 0px;
-  //   }
+    // .container {
+    //   @include wxh(none, none);
+    // }
+    //
+    // .divider-block {
+    //   display: none;
+    // }
+    //
+    // .block-left {
+    //   // background-color: green;
+    //   @include flex(center, none);
+    //   flex-direction: column;
+    //   height: auto;
+    // }
+    //
+    // .block-right {
+    //   background-color: $blue;
+    //   @include flex(center, none);
+    //   flex-direction: column;
+    //   @include wxh(500px, 540px);
+    //   padding-left: 45px;
+    // }
+    //
+    // .background2 {
+    //   background-color: $off-black;
+    //   width: 100%;
+    // }
   }
-}
+  //***************************************
+    @media (max-width: 550px) {
+      #horizontal{
+        display: none;
+      }
+      form {
+        margin-left: 0px;
+      }
+      .login {
+        display: none;
+      }
+      .block-left {
+        position: absolute;
+        top: 45px;
+      }
+      .description {
+        font-size: 22px;
+        text-align: center;
+        padding-left: 7px;
+      }
+      .description-box {
+        margin-top: 0px;
+      }
+      .container {
+        @include flex(center, center);
+        @include wxh(100vw, 100%);
+        margin: 0 auto;
+      }
+      .block-right {
+        background-color: $blue;
+        @include flex(center, none);
+        flex-direction: column;
+        @include wxh(auto, auto);
+        padding: 45px;
+
+      }
+    }
 }
