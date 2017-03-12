@@ -140,6 +140,13 @@
     display: inline-block;
     @include wxh(440px, 445px);
     margin-top: 20px;
+  }
+
+  .divider-block {
+    display: inline-block;
+    @include wxh(440px, 445px);
+    width: 160px;
+    margin: 30px;
     // background-color: salmon;
   }
 
@@ -154,6 +161,22 @@
     @include flex(center, center);
     margin-top: 15px;
     // background-color: orangered;
+  }
+
+/////////////////////////// MEDIA QUERIES ///////////////////////////
+//RIGHT AND LEFT LAYOUTS
+  @media (max-width: 1370px) {
+    .divider-block {
+      width: 100px;
+      margin: 20px;
+      // background-color: red;
+    }
+  }
+  @media (max-width: 1200px) {
+    .divider-block {
+      width: 50px;
+      margin: 20px;
+    }
   }
 
 }
