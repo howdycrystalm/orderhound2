@@ -1,61 +1,52 @@
-<div class="cat"><!-- <<< scss in headerDirective.scss -->
-<header-directive></header-directive>
-    <div class="center-container">
-      <div class="title bottom-line">Add PO</div>
-      <!-- addPO button -->
-        <div class="input-container">
-          <input type="text"  placeholder="Add PO#" ng-model="ponum"/>
-          <button type="button" class="button" style="height: 100%;" ng-click="addpo(ponum)">Add<i class="material-icons">add_circle</i></button>
-          <br>
-        </div>
+<div class="center-of-everything">
+  <!-- <<< scss in headerDirective.scss -->
+  <header-directive></header-directive>
+  <div class="center-container">
+    <div class="title bottom-line">Add PO</div>
+    <!-- addPO button -->
+    <div class="input-container">
+      <input type="text" placeholder="Add PO#" ng-model="ponum" />
+      <button type="button" class="button" style="height: 100%;" ng-click="addpo(ponum)">Add<i class="material-icons">add_circle</i></button>
+      <br>
     </div>
-    <!-- find po button -->
-    <div class="center-container" style="height: 200px;">
-      <button class="accordion">Find PO</button>
-        <div class="panel">
-          <input type="text"  placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber"/>
-          <button type="button" class="button" ng-click="findpo(poNumber); showModal=!showModal">Find<i class="material-icons" style="font-size:32px;">search</i></button>
-        </div>
+  </div>
+  <!-- find po button -->
+  <div class="center-container" style="height: 200px;">
+    <button class="accordion">Find PO</button>
+    <div class="panel">
+      <input type="text" placeholder="Find PO#" class="input-field input-po-position" ng-model="poNumber" />
+      <button type="button" class="button" ng-click="findpo(poNumber); showModal=!showModal">Find<i class="material-icons" style="font-size:32px;">search</i></button>
     </div>
-    FOUND: {{poInfo[0].po_num}}
-    <br>
-    {{poInfo[0].employee_id}}
-    {{poInfo[0].checkpoint_id}}
-    <!-- ********************* MODAL *******************-->
-    <!-- MODAL -->
+  </div>
+  FOUND: {{poInfo[0].po_num}}
+  <br> {{poInfo[0].employee_id}} {{poInfo[0].checkpoint_id}}
+  <!-- ********************* MODAL *******************-->
+  <!-- MODAL -->
   <div class="modal-bg" ng-show="showModal">
     <!-- MODAL CONTENTS -->
     <div>
-    <div class="close-container">
-      <div class="x-box" ng-click="showModal=!showModal">
-        <span class="right"></span>
-        <span class="left"></span>
+      <div class="close-container">
+        <div class="x-box" ng-click="showModal=!showModal">
+          <span class="right"></span>
+          <span class="left"></span>
+        </div>
       </div>
-    </div>
-    <div class="modal-content">
-      <!-- <div class="modal-header">
-        <h2>PO# {{poInfo[0].po_num}} is at {{poInfo[0].checkpoint_id}} checkpoint with user {{poInfo[0].employee_id}}.</h2>
-        <br>
-        {{poInfo[0].date}}
-      </div> -->
-      <div class="modal-body">
-        <div class="photo-container">
-          <div class="employee-photo">
-          <img src={{poInfo[0].employee_photo}} alt="user photo"/>
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="photo-container">
+            <div class="employee-photo">
+              <img src={{poInfo[0].employee_photo}} alt="user photo" />
+            </div>
+          </div>
+          <div>
+            PO# {{poInfo[0].po_num}}
+            <br> User: {{poInfo[0].employee_id}}
+            <br> Checkpoint: {{poInfo[0].checkpoint_id}}
+            <br> Date: {{poInfo[0].date}}
           </div>
         </div>
-        <div>
-          PO# {{poInfo[0].po_num}}
-          <br>
-          User: {{poInfo[0].employee_id}}
-          <br>
-          Checkpoint: {{poInfo[0].checkpoint_id}}
-          <br>
-          Date: {{poInfo[0].date}}
-        </div>
       </div>
     </div>
-</div>
-</div>
+  </div>
 
 </div>
