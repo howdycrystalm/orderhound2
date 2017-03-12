@@ -33,19 +33,26 @@
       </div>
     </div>
     <div class="modal-content">
-      <div class="modal-header">
+      <!-- <div class="modal-header">
         <h2>PO# {{poInfo[0].po_num}} is at {{poInfo[0].checkpoint_id}} checkpoint with user {{poInfo[0].employee_id}}.</h2>
         <br>
         {{poInfo[0].date}}
-      </div>
+      </div> -->
       <div class="modal-body">
-        <div class="employee-photo">
+        <div class="photo-container">
+          <div class="employee-photo">
           <img src={{poInfo[0].employee_photo}} alt="user photo"/>
+          </div>
         </div>
-        <br>
-        {{poInfo[0].employee_id}}
-        {{poInfo[0].checkpoint_id}}
-
+        <div>
+          PO# {{poInfo[0].po_num}}
+          <br>
+          User: {{poInfo[0].employee_id}}
+          <br>
+          Checkpoint: {{poInfo[0].checkpoint_id}}
+          <br>
+          Date: {{poInfo[0].date}}
+        </div>
       </div>
     </div>
 </div>
