@@ -107,7 +107,7 @@
     @include flex(center, center);
     flex-direction: column;
   }
-////////MAKING X///////////
+//////// MAKING CLOSE X ///////////
   .left {
     z-index: 3;
     width: 2px;
@@ -164,36 +164,22 @@
     @include flex(center, center);
     cursor: pointer;
   }
-  //HEADER
-  .modal-header {
-      padding: 30px;
-      background-color: $off-white;
-      color: $off-black;
-      font-family: $font;
-      // font-weight:bold;
-      font-size: 30px;
-      // text-transform: uppercase;
-      text-align: center;
-  }
 
   //BODY
   .modal-body {
-    color: #333;
+    color: $off-black;
     font-family: $font;
-    font-size: 15px;
-    text-align: center;
-    line-height: 23px;
-    border-bottom: 2px solid blue;
-    border-top: 2px solid blue;
+    font-size: 20px;
+    line-height: 35px;
     background: $off-white;
     padding: 30px;
   }
 
-  //FOOTER
-  .modal-footer {
-    padding: 30px;
-    background-color: $gold;
+  //EMPLOYEE PHOTO
+
+  .photo-container {
     @include flex(center, center);
+    margin-bottom: 25px;
   }
 
   .employee-photo {

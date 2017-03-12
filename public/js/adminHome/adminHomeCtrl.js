@@ -1,10 +1,12 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module('houndApp').controller('adminHomeCtrl', function($scope, mainService, user, $state) {
+angular.module('houndApp').controller('adminHomeCtrl', function($scope, mainService, homeService, searchService, user, $state) {
 
   // VARIABLES
   // ============================================================
   $scope.user = user;
+  $scope.showModal = false;
+  $scope.showX = false;
   $scope.obj = {};//do i need this still????
 
   // FUNCTIONS
@@ -26,7 +28,15 @@ angular.module('houndApp').controller('adminHomeCtrl', function($scope, mainServ
       return alert("Could not register user");
     });
   };
-
+//********************************** SEARCH **********************************//
+  $scope.findpo = function (poNumber) {
+    searchService.findpo(poNumber).then(function (response) {
+      // alert("PO found!");
+      console.log(response);
+      $scope.poInfo = response;
+      $scope.poNumber = '';
+    })
+  };
   // $scope.getter = function(addUser){
   //   mainService.addUser(addUser).then(function(response) {
   //     //everything that happens AFTER goes here, like clear form, $state.go
