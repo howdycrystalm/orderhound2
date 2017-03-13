@@ -11,6 +11,7 @@
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, .65);
+    // @include flex(center, center);
   }
   .background {
     background-color: $off-black;
@@ -18,7 +19,6 @@
     width: 100vw;
     // height: 100%;
     @include image('../../../images/login.jpg');
-    // @include flex(center, center);
   }
   /////////////////////////// LOGIN ///////////////////////////
   .login {
@@ -89,7 +89,7 @@
   .logo {
     @include image('../../../images/logo-off-white.png');
     @include wxh(100px, 58px);
-    margin-left: 169px;
+    margin: 30px auto;
   }
 
   .description {
@@ -101,6 +101,7 @@
     line-height: 63px;
     margin-top: 15px;
     // margin-right: 32px;
+    // background-color: darkseagreen;
   }
   /////////////////////////// RIGHT ///////////////////////////
   .right-title {
@@ -108,12 +109,12 @@
     color: $off-white;
     font-size: 30px;
     margin-bottom: 15px;
-    margin-left: 20px;
+    // background-color: grey;
   }
 
-  form {
-    margin-left: 20px;
-  }
+  // form {
+  //   margin-left: 20px;
+  // }
 
   input {
     @include input();
@@ -146,12 +147,16 @@
     display: inline-block;
     @include wxh(auto, 445px);
     margin-top: 20px;
+    // background-color: $gold;
   }
 
   .block-right {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include wxh(auto, 445px);
-    margin-top: 20px;
+    // margin-top: 20px;
+    // background-color: salmon;
   }
 
   .divider-block {
@@ -165,7 +170,7 @@
   .title-logo-box {
     @include wxh(100%, auto);
     display: inline-block;
-    // background: $gold;
+    // background: pink;
   }
 
   .description-box {
@@ -175,6 +180,10 @@
     // background-color: orangered;
   }
 
+  // #vertical {
+  //   width: 950px;
+  //   height: 100vh;
+  // }
 /////////////////////////// MEDIA QUERIES ///////////////////////////
 //RIGHT AND LEFT LAYOUTS
   @media (min-width: 1371px) {
@@ -220,6 +229,31 @@
     #vertical {
       display: inline;
     }
+
+    .container2{
+      max-width: 950px;
+      height: 100vh;
+      background-color: #000;
+      position: relative;
+      @include flex(center, center);
+      margin: 0 auto;
+      // background-color: darkslateblue;
+    }
+
+    .divider-block {
+      display: none;
+    }
+
+    .overlay {
+      overflow-x:hidden;
+overflow-y:scroll;
+    }
+
+
+
+    // .login {
+    //
+    // }
     // .container {
     //   @include wxh(none, none);
     // }
