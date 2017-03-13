@@ -134,6 +134,16 @@
   button:focus {
     outline: 0;
   }
+
+  .bottom-links {
+    // position: absolute;
+    bottom: 20px;
+    font-family: $font;
+    font-size: 20px;
+    color: $green;
+    margin: 0 auto;
+    text-align: center;
+  }
   /////////////////////////// LAYOUT ///////////////////////////
   .container {
     position: relative;
@@ -230,10 +240,31 @@
       display: inline;
     }
 
+    .bottom-links {
+      display: none;
+    }
+
+    .bottom-links-vert {
+      @include wxh(500px, 150px);
+      bottom: 75px;
+      font-family: $font;
+      font-size: 30px;
+      color: $green;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .bottom-links-vert > i {
+      color: $off-white;
+      font-size: 40px;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
     .container2{
       max-width: 950px;
       height: 100vh;
-      background-color: #000;
+      background-color: $blue;
       position: relative;
       @include flex(center, center);
       margin: 0 auto;
@@ -246,7 +277,7 @@
 
     .overlay {
       overflow-x:hidden;
-overflow-y:scroll;
+      overflow-y:scroll;
     }
 
 
