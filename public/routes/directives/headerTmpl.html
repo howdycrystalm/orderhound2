@@ -1,5 +1,4 @@
-<header class="header">
-
+<header id="header">
 
   <div class="container">
   <ul>
@@ -19,5 +18,16 @@
     </li>
   </ul>
 </div>
+  <button type="button" class="logout-button" ng-click="logout()">Logout</button>
+</header>
+
+<!-- iphone query -->
+<header id="iphone-header">
+
+  <div class="container">
+    <div class="user-photo">
+      <img src={{user.photo}} alt="user photo"/>
+    </div>
+  </div>
   <button type="button" class="logout-button" ng-click="logout()">Logout</button>
 </header>
