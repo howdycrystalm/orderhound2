@@ -217,10 +217,6 @@
         height: 100%;
         padding: 10px 5px 10px 8px;
       }
-      // button {
-      //   display: inline;
-      //   height: 100%;
-      // }
       input {
         @include input();
         @include wxh(210px, 53px);
