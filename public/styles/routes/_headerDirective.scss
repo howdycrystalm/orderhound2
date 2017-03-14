@@ -98,4 +98,31 @@
     flex-direction: column;
   }
 
+  /////////////////////////// MEDIA QUERIES ///////////////////////////
+    @media (max-width: 935px) {
+      .welcome {
+        margin-left: 25px;
+      }
+      .break {
+        margin-left: 25px;
+      }
+      .logout-button {
+        right: 25px;
+      }
+    }
+  // //***************************************
+  //   @media (max-width: 550px) {
+  //     input {
+  //       width: 250px;
+  //     }
+  //     .center-container {
+  //       width: auto;
+  //     }
+  //     .input-container {
+  //       width: auto;
+  //       justify-content: flex-start;
+  //     }
+  //
+  //   }
+
 }
