@@ -343,18 +343,10 @@
         margin-top: 30px;
       }
       .header-button {
-        @include wxh(110px, 50px);
-        @include button-maker($green, #fff);
-        // border: 1px solid $off-white;
-        font-size: 20px;
         margin-top: 30px;
-        margin-left: 0px;
-        padding-bottom: 4px;
       }
       .block-left {
-        position: absolute;
-        top: 45px;
-        width: 414px;
+        width: 319px;
       }
       .title {
         font-size: 53px;
@@ -365,25 +357,17 @@
       .logo {
         margin-bottom: 17px;
         @include wxh(75px, 44px);
-        margin-right: 160px;
       }
       .description-box {
-          width: 319px;
+          width: 335px;
           height: 56px;
           margin: 0 auto;
-          margin-right: 37px;
           // background-color: salmon;
       }
       .description {
-        font-size: 20px;
-        line-height: 23px;
+        font-size: 17px;
         text-align: center;
-        margin-right: 0px;
-      }
-      .bottom-links-vert {
-        bottom: 125px;
-        width: auto;
-        height: 150px;
+        margin: 0 auto;
       }
     }
 }
