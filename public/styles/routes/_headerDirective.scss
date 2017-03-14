@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  .header {
+  #header {
     position: fixed;
     top: 0;
     left: 0;
@@ -100,6 +100,9 @@
 
   /////////////////////////// MEDIA QUERIES ///////////////////////////
     @media (max-width: 935px) {
+      #iphone-header {
+        display:none;
+      }
       .welcome {
         margin-left: 25px;
       }
@@ -111,18 +114,24 @@
       }
     }
   // //***************************************
-  //   @media (max-width: 550px) {
-  //     input {
-  //       width: 250px;
-  //     }
-  //     .center-container {
-  //       width: auto;
-  //     }
-  //     .input-container {
-  //       width: auto;
-  //       justify-content: flex-start;
-  //     }
-  //
-  //   }
+    @media (max-width: 630px) {
+      #header {
+        display:none;
+      }
+      #iphone-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        @include wxh(100vw, 100px);
+        background-color: $green;
+        display: flex;
+        flex-direction: column;
+      }
+      .user-photo {
+        width: 80px;
+        max-height: 80px;
+        margin: 10px 30px;
+      }
+    }
 
 }
