@@ -4,6 +4,7 @@
 
 .button {
   border: 1px solid $off-white;
+
 }
 
 .no-cursor {
@@ -11,18 +12,22 @@
 }
 
 .butt.admin-accordion {
-    width: 100%;
-    background: $off-black;
-    color: $off-white;
-    font-size: 35px;
-    font-family: $font;
-    text-align: center;
-    border: 1px solid $dark-grey;
-    border-bottom: 0;
-    outline: none;
-    padding: 20px;
-    cursor: pointer;
-    // transition: 0.1s;
+  width: 100%;
+  background: $off-black;
+  color: $off-white;
+  font-size: 35px;
+  font-family: $font;
+  text-align: center;
+  border: 1px solid $dark-grey;
+  border-bottom: 0;
+  outline: none;
+  padding: 20px;
+  cursor: pointer;
+  // transition: 0.1s;
+}
+a {
+  text-decoration: none;
+  color: $off-white;
 }
 
 .butt.admin-accordion.active:first-child, .butt.admin-accordion:hover:first-child{
@@ -35,9 +40,11 @@
 
 .butt.admin-accordion.active:nth-child(4), .butt.admin-accordion:hover:nth-child(4) {
   background-color: $gold;
+  cursor: none;
 }
 .butt.admin-accordion.active:nth-child(6), .butt.admin-accordion:hover:nth-child(6) {
   background-color: $red;
+  cursor: none;
 }
 
 
@@ -55,4 +62,40 @@ div.panel2 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+/////////////////////////// MEDIA QUERIES ///////////////////////////
+@media (max-width: 550px) {
+  input {
+    width: 250px;
+  }
+  .center-container {
+    width: auto;
+  }
+}
+//***************************************
+@media (max-width: 450px) {
+  input {
+    @include input();
+    @include wxh(210px, 53px);
+    margin-top: 0;
+  }
+  i {
+    font-size: 18px;
+    vertical-align: middle;
+    margin: 0px 0px 3px 8px;
+  }
+  .button {
+    @include flex(center, center);
+    @include wxh(106px, 72%);
+    padding: 10px 5px 10px 8px;
+  }
+  .bottom-line {
+    width: 212px;
+  }
+  .panel {
+    align-items: center;
+  }
+  button.accordion {
+    width: 211px;
+  }
 }

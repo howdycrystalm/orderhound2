@@ -211,6 +211,12 @@
   //***************************************
 
     @media (max-width: 450px) {
+      button.button {
+        display: inline-block;
+        width: 106px;
+        height: 100%;
+        padding: 10px 5px 10px 8px;
+      }
       input {
         @include input();
         @include wxh(210px, 53px);
@@ -221,11 +227,7 @@
         vertical-align: middle;
         margin: 0px 0px 3px 8px;
       }
-      .button {
-        @include flex(center, center);
-        @include wxh(106px, 72%);
-        padding: 10px 5px 10px 8px;
-      }
+
       .bottom-line {
         width: 212px;
       }
