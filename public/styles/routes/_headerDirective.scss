@@ -99,6 +99,11 @@
   }
 
   /////////////////////////// MEDIA QUERIES ///////////////////////////
+  @media (min-width: 935px) {
+    #iphone-header {
+      display:none;
+    }
+  }
     @media (max-width: 935px) {
       #iphone-header {
         display:none;
