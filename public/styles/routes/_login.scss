@@ -208,7 +208,7 @@
     .divider-block {
       width: 100px;
       margin: 20px;
-      // background-color: red;
+      background-color: red;
     }
   }
 //***************************************
@@ -227,6 +227,10 @@
 //***************************************
   @media (max-width: 950px) {
     #horizontal{
+      display: none;
+    }
+
+    .login-vert {
       display: none;
     }
     #vertical {
@@ -278,36 +282,55 @@
       #horizontal{
         display: none;
       }
-      form {
-        display: none;
-      }
       .login {
         display: none;
+      }
+      .login-vert {
+        display: flex;
+        flex-direction: column;
+        top: 30px;
+      }
+      input {
+        margin-top: 20px;
+      }
+      .header-button {
+        @include wxh(110px, 50px);
+        @include button-maker($green, #fff);
+        // border: 1px solid $off-white;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding-bottom: 4px;
       }
       .block-left {
         position: absolute;
         top: 45px;
+        height: auto;
+      }
+      .logo {
+        margin-bottom: 20px;
       }
       .description {
         font-size: 22px;
         text-align: center;
-        padding-left: 7px;
-      }
-      .description-box {
-        margin-top: 0px;
+        margin-top: 0;
       }
       .container {
         @include flex(center, center);
         @include wxh(100vw, 100%);
         margin: 0 auto;
       }
-      .block-right {
-        background-color: $blue;
-        @include flex(center, none);
-        flex-direction: column;
-        @include wxh(auto, auto);
-        padding: 45px;
+      .bottom-links-vert {
+        bottom: 125px;
+        height: auto;
+      }
 
+
+
+    }
+    @media (max-width: 440px) {
+      #horizontal{
+        display: none;
       }
     }
 }
