@@ -229,6 +229,10 @@
     #horizontal{
       display: none;
     }
+
+    .login-vert {
+      display: none;
+    }
     #vertical {
       display: inline;
     }
@@ -278,36 +282,92 @@
       #horizontal{
         display: none;
       }
-      form {
-        display: none;
-      }
       .login {
         display: none;
+      }
+      .login-vert {
+        display: flex;
+        flex-direction: column;
+        top: 30px;
+      }
+      input {
+        width: 419px;
+        margin-top: 20px;
+      }
+      .header-button {
+        @include wxh(110px, 50px);
+        @include button-maker($green, #fff);
+        // border: 1px solid $off-white;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding-bottom: 4px;
       }
       .block-left {
         position: absolute;
         top: 45px;
+        width: 414px;
+      }
+      .title-logo-box {
+        max-width: 409px;
+      }
+      .logo {
+        margin-bottom: 20px;
       }
       .description {
         font-size: 22px;
-        text-align: center;
-        padding-left: 7px;
-      }
-      .description-box {
-        margin-top: 0px;
+        margin-top: 0;
+        margin-right: 10px;
       }
       .container {
         @include flex(center, center);
         @include wxh(100vw, 100%);
         margin: 0 auto;
       }
-      .block-right {
-        background-color: $blue;
-        @include flex(center, none);
-        flex-direction: column;
-        @include wxh(auto, auto);
-        padding: 45px;
-
+      .bottom-links-vert {
+        bottom: 125px;
+        width: auto;
+        height: 150px;
+      }
+    }
+//***************************************
+    @media (max-width: 440px) {
+      #horizontal{
+        display: none;
+      }
+      .login-vert {
+        top: 35px;
+      }
+      input {
+        width: 319px;
+        margin-top: 30px;
+      }
+      .header-button {
+        margin-top: 30px;
+      }
+      .block-left {
+        width: 319px;
+      }
+      .title {
+        font-size: 53px;
+        text-align: center;
+        color: $off-white;
+        margin-left: 7px;
+      }
+      .logo {
+        margin-bottom: 17px;
+        @include wxh(75px, 44px);
+      }
+      .description-box {
+          width: 335px;
+          height: 56px;
+          margin: 0 auto;
+          // background-color: salmon;
+      }
+      .description {
+        font-size: 17px;
+        text-align: center;
+        margin: 0 auto;
       }
     }
 }
