@@ -291,6 +291,7 @@
         top: 30px;
       }
       input {
+        width: 419px;
         margin-top: 20px;
       }
       .header-button {
@@ -305,15 +306,18 @@
       .block-left {
         position: absolute;
         top: 45px;
-        height: auto;
+        width: 414px;
+      }
+      .title-logo-box {
+        max-width: 409px;
       }
       .logo {
         margin-bottom: 20px;
       }
       .description {
         font-size: 22px;
-        text-align: center;
         margin-top: 0;
+        margin-right: 10px;
       }
       .container {
         @include flex(center, center);
@@ -322,7 +326,8 @@
       }
       .bottom-links-vert {
         bottom: 125px;
-        height: auto;
+        width: auto;
+        height: 150px;
       }
 
 
