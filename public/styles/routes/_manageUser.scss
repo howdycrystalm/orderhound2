@@ -31,7 +31,7 @@
 
 .ifield-container {
   width: auto;
-  height: 285px;
+  height: 210px;
   @include flex(center, stretch);
   background-color: tan;
 }
@@ -40,7 +40,26 @@
   margin-bottom: 10px;
 }
 
-.check-box-div {
-  width: 300px;
-  background-color: olive; 
+.checkbox-div {
+  background-color: olive;
+  width: 148px;
+  height: 23px;
+  top: 30px;
+}
+
+.checkbox-position {
+  bottom: 35px;
+  left: 131px;
+  zoom:1.5.5;
+  transform:scale(1.5);
+  -ms-transform:scale(1.5);
+  -webkit-transform:scale(1.5);
+  -o-transform:scale(1.5);
+  -moz-transform:scale(1.5);
+  transform-origin:0 0;
+  -ms-transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+  -o-transform-origin:0 0;
+  -moz-transform-origin:0 0;
+  -webkit-transform-origin:0 0;
 }
