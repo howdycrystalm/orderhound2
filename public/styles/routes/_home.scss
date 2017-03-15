@@ -149,6 +149,8 @@
   .close-container {
     height: 50px;
     position: relative;
+    bottom: 50px;
+    left: 75px;
     @include flex(flex-end, center);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -207,9 +209,19 @@
         width: auto;
         justify-content: flex-start;
       }
+      .close-container {
+        bottom: 25px;
+        left: 37px;
+      }
     }
   //***************************************
-
+  @media (max-width: 480px) {
+    .close-container {
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+  //***************************************
     @media (max-width: 450px) {
       button.button {
         display: inline-block;
