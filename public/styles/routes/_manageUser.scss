@@ -1,0 +1,29 @@
+.center-of-manageUsers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  height: 100vh;
+}
+
+.make-user-container {
+  display: inline-block;
+  font-family: $font;
+
+  color: $off-white;
+  background-color: teal;
+  width: 370px;
+  margin: 0px 30px;
+}
+
+// .input-container {
+//   width: auto;
+//   height: 285px;
+//   @include flex(center, stretch);
+//   background-color: tan;
+// }
+
+// input {
+//   @include input();
+// }

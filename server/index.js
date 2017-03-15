@@ -99,6 +99,7 @@ app.post('/api/register', authCtrl.register);
 app.get('/api/user', authCtrl.read);
 app.get('/api/me', isAuthed, authCtrl.me);
 app.get('/api/adminHome', isAdmin, authCtrl.me);
+app.get('/api/manageUser', isAdmin, authCtrl.me);
 // app.get('/checkpoints', isAuthed, checkpointsCtrl.all_from_checkpoints);
 // app.get('/api/getpo', checkinCtrl.getpo);
 

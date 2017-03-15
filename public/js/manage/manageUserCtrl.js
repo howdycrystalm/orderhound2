@@ -1,5 +1,6 @@
 angular.module('houndApp')
-.controller('manageUserCtrl', function($scope, $state, mainService) {
+.controller('manageUserCtrl', function($scope, $state, mainService, user) {
+    $scope.user = user;
     $scope.obj = {};//do i need this still????
 
     $scope.getter = function(addUser){
@@ -17,4 +18,9 @@ angular.module('houndApp')
       });
     };
 
+    $scope.logout = function() {
+      mainService.logout().then(function(response) {
+        $state.go('login');
+      });
+    };
 });
