@@ -1,0 +1,46 @@
+.center-of-manageUsers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  height: 100vh;
+}
+
+.make-user-title {
+  display: flex;
+  right: 228px;
+  width: auto;
+  color: $off-white;
+  font-family: $font;
+  font-size: 50px;
+  border-width: 100px;
+  border-bottom: 2px solid $off-white;
+  background: salmon;
+  margin-bottom: 10px
+}
+.make-user-container {
+  display: inline-block;
+  font-family: $font;
+  font-size: 20px;
+  color: $off-white;
+  background-color: teal;
+  width: 370px;
+  margin: 0px 30px;
+}
+
+.ifield-container {
+  width: auto;
+  height: 285px;
+  @include flex(center, stretch);
+  background-color: tan;
+}
+
+#input-margins {
+  margin-bottom: 10px;
+}
+
+.check-box-div {
+  width: 300px;
+  background-color: olive; 
+}
