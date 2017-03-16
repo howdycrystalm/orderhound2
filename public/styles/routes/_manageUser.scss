@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 
+  body {
+    background-color: $blue;
+  }
+
   .make-user-title {
     display: flex;
     right: 228px;
@@ -30,7 +34,7 @@
 
   .ifield-container {
     width: auto;
-    height: 210px;
+    height: 310px;
     @include flex(center, stretch);
     background-color: tan;
   }
@@ -41,62 +45,43 @@
     margin-top: 20px;
   }
 
-  // @mixin input() {
-  //   @include wxh(370px, 53px);
-  //   outline: none;
-  //   border: 0px solid;
-  //   text-indent: 12px;
-  //   margin-top: 10px;
-  //   font-family: $font;
-  //   font-size: 20px;
-  //   background-color: $off-white;
-  //   color: $off-black;
-  // }
-
   .checkbox-div {
     background-color: olive;
     width: 180px;
     height: 40px;
-    top: 30px;
-    margin-left: 190px;
+    top: 12px;
+    margin-left: 192px;
   }
 
-  // .make-user-button {
-  //   @include wxh(195px, 50px);
-  //   @include button-maker ($green, #fff);
-  //   // text-align: center;
-  //   @include flex(center, center);
-  //   // -webkit-box-sizing: border-box;
-  //   // -moz-box-sizing: border-box;
-  //   // box-sizing: border-box;
-  //   font-family: $font;
-  //   font-size: 20px;
-  //   margin-top: 61px;
-  //   // padding-top: 18px;
-  // }
-  button {
+  .create-user-button {
     @include wxh(195px, 50px);
     @include button-maker ($green, #fff);
+    @include flex(center, center);
     font-size: 20px;
+    font-family: $font;
     margin-top: 25px;
   }
-  
-  make-user-button:hover {
+
+  .create-user-button:hover {
     background-color: $light-green;
   }
 
-  make-user-button:focus {
+  .create-user-button:focus {
+    outline: 0;
+  }
+  .create-user-button2:hover {
+    background-color: $light-green;
+  }
+
+  .create-user-button2:focus {
     outline: 0;
   }
 
   //***************************************
   @media (max-width: 860px) {
-    // .ifield-container {
-    //   width: auto;
-    //   height: 210px;
-    //   @include flex(center, stretch);
-    //   background-color: tan;
-    // }
+    .create-user-button2 {
+      display: none;
+    }
     .make-user-container {
       font-size: 20px;
       width: 270px;
@@ -105,6 +90,62 @@
     #input-margins {
       width: 270px;
     }
+    .checkbox-div {
+      margin-left: 91px;
+    }
   }
+
+  @media (max-width: 800px) {
+    .create-user-button2 {
+      display: none;
+    }
+    .make-user-title {
+      right: 114px;
+    }
+    .checkbox-div {
+      margin-left: 92px;
+    }
+  }
+//*****************************************
+  @media (max-width: 600px) {
+    .create-user-button {
+      display: none;
+    }
+    .create-user-button2 {
+      @include wxh(195px, 50px);
+      @include button-maker ($green, #fff);
+      @include flex(center, center);
+      font-size: 20px;
+      font-family: $font;
+      margin-top: 25px;
+      margin: 30px auto;
+    }
+    .make-user-title {
+      z-index: 1;
+      right: 0px;
+      margin-top: 0px;
+      margin-bottom: -7px;
+    }
+    .make-user-container {
+      width: 340px;
+      height: 219px;
+    }
+    #input-margins {
+      width: 340px;
+      margin-top: 20px;
+    }
+    .ifield-container {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .checkbox-div {
+      margin-left: 168px;
+      top: 0px;
+      bottom: 5px;
+    }
+
+  }
+
 
 }
