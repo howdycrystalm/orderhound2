@@ -15,7 +15,7 @@
   font-family: $font;
   font-size: 50px;
   border-bottom: 2px solid $off-white;
-  // background: salmon;
+  background: salmon;
   margin-bottom: 6px;
   margin-top: 100px;
   line-height: normal;
@@ -25,7 +25,7 @@
   font-family: $font;
   font-size: 20px;
   color: $off-white;
-  // background-color: teal;
+  background-color: teal;
   width: 370px;
   margin: 0px 30px;
 }
@@ -34,15 +34,29 @@
   width: auto;
   height: 210px;
   @include flex(center, stretch);
-  // background-color: tan;
+  background-color: tan;
 }
 
 #input-margins {
-  margin-bottom: 10px;
+  @include input();
+  bottom: 20px;
+  margin-top: 20px;
 }
 
+// @mixin input() {
+//   @include wxh(370px, 53px);
+//   outline: none;
+//   border: 0px solid;
+//   text-indent: 12px;
+//   margin-top: 10px;
+//   font-family: $font;
+//   font-size: 20px;
+//   background-color: $off-white;
+//   color: $off-black;
+// }
+
 .checkbox-div {
-  // background-color: olive;
+  background-color: olive;
   width: 180px;
   height: 40px;
   top: 30px;
@@ -57,7 +71,7 @@
   font-family: $font;
   font-size: 20px;
   margin-top: 61px;
-  padding-top: 15px;
+  padding-top: 18px;
 }
 
 make-user-button:hover {
@@ -66,4 +80,24 @@ make-user-button:hover {
 
 make-user-button:focus {
   outline: 0;
+}
+
+//***************************************
+@media (max-width: 860px) {
+  // .ifield-container {
+  //   width: auto;
+  //   height: 210px;
+  //   @include flex(center, stretch);
+  //   background-color: tan;
+  // }
+  .make-user-container {
+    font-size: 20px;
+    width: 270px;
+    margin: 0px 15px;
+  }
+  #input-margins {
+    width: 270px;
+  }
+
+
 }
