@@ -117,14 +117,15 @@
       @include flex(center, center);
       font-size: 20px;
       font-family: $font;
-      margin-top: 25px;
-      margin: 30px auto;
+      margin: 0 auto;
+      bottom: 135px;
     }
     .make-user-title {
       z-index: 1;
       right: 0px;
-      margin-top: 0px;
+      margin-top: 1px;
       margin-bottom: -7px;
+      bottom: 75px;
     }
     .make-user-container {
       width: 340px;
@@ -138,6 +139,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+      bottom: 75px;
     }
     .checkbox-div {
       margin-left: 168px;
