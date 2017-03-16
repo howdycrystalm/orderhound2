@@ -1,46 +1,153 @@
-.center-of-manageUsers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: $blue;
-  height: 100vh;
-}
+* {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-.make-user-title {
-  display: flex;
-  right: 228px;
-  width: auto;
-  color: $off-white;
-  font-family: $font;
-  font-size: 50px;
-  border-width: 100px;
-  border-bottom: 2px solid $off-white;
-  background: salmon;
-  margin-bottom: 10px
-}
-.make-user-container {
-  display: inline-block;
-  font-family: $font;
-  font-size: 20px;
-  color: $off-white;
-  background-color: teal;
-  width: 370px;
-  margin: 0px 30px;
-}
+  body {
+    background-color: $blue;
+  }
 
-.ifield-container {
-  width: auto;
-  height: 285px;
-  @include flex(center, stretch);
-  background-color: tan;
-}
+  .make-user-title {
+    display: flex;
+    right: 228px;
+    width: auto;
+    color: $off-white;
+    font-family: $font;
+    font-size: 50px;
+    border-bottom: 2px solid $off-white;
+    background: salmon;
+    margin-bottom: 6px;
+    margin-top: 100px;
+    line-height: normal;
+  }
+  .make-user-container {
+    display: inline-block;
+    font-family: $font;
+    font-size: 20px;
+    color: $off-white;
+    background-color: teal;
+    width: 370px;
+    margin: 0px 30px;
+  }
 
-#input-margins {
-  margin-bottom: 10px;
-}
+  .ifield-container {
+    width: auto;
+    height: 310px;
+    @include flex(center, stretch);
+    background-color: tan;
+  }
 
-.check-box-div {
-  width: 300px;
-  background-color: olive; 
+  #input-margins {
+    @include input();
+    bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .checkbox-div {
+    background-color: olive;
+    width: 180px;
+    height: 40px;
+    top: 12px;
+    margin-left: 192px;
+  }
+
+  .create-user-button {
+    @include wxh(195px, 50px);
+    @include button-maker ($green, #fff);
+    @include flex(center, center);
+    font-size: 20px;
+    font-family: $font;
+    margin-top: 25px;
+  }
+
+  .create-user-button:hover {
+    background-color: $light-green;
+  }
+
+  .create-user-button:focus {
+    outline: 0;
+  }
+  .create-user-button2:hover {
+    background-color: $light-green;
+  }
+
+  .create-user-button2:focus {
+    outline: 0;
+  }
+
+  //***************************************
+  @media (max-width: 860px) {
+    .create-user-button2 {
+      display: none;
+    }
+    .make-user-container {
+      font-size: 20px;
+      width: 270px;
+      margin: 0px 15px;
+    }
+    #input-margins {
+      width: 270px;
+    }
+    .checkbox-div {
+      margin-left: 91px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .create-user-button2 {
+      display: none;
+    }
+    .make-user-title {
+      right: 114px;
+    }
+    .checkbox-div {
+      margin-left: 92px;
+    }
+  }
+//*****************************************
+  @media (max-width: 600px) {
+    .create-user-button {
+      display: none;
+    }
+    .create-user-button2 {
+      @include wxh(195px, 50px);
+      @include button-maker ($green, #fff);
+      @include flex(center, center);
+      font-size: 20px;
+      font-family: $font;
+      margin: 0 auto;
+      bottom: 135px;
+    }
+    .make-user-title {
+      z-index: 1;
+      right: 0px;
+      margin-top: 1px;
+      margin-bottom: -7px;
+      bottom: 75px;
+    }
+    .make-user-container {
+      width: 340px;
+      height: 219px;
+    }
+    #input-margins {
+      width: 340px;
+      margin-top: 20px;
+    }
+    .ifield-container {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      bottom: 75px;
+    }
+    .checkbox-div {
+      margin-left: 168px;
+      top: 0px;
+      bottom: 5px;
+    }
+
+  }
+
+
 }
