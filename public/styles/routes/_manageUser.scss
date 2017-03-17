@@ -9,6 +9,7 @@
     background-color: $blue;
   }
 
+
   .make-user-title {
     display: flex;
     right: 228px;
@@ -17,7 +18,7 @@
     font-family: $font;
     font-size: 50px;
     border-bottom: 2px solid $off-white;
-    background: salmon;
+    // background: salmon;
     margin-bottom: 6px;
     margin-top: 100px;
     line-height: normal;
@@ -27,7 +28,7 @@
     font-family: $font;
     font-size: 20px;
     color: $off-white;
-    background-color: teal;
+    // background-color: teal;
     width: 370px;
     margin: 0px 30px;
   }
@@ -36,7 +37,7 @@
     width: auto;
     height: 310px;
     @include flex(center, stretch);
-    background-color: tan;
+    // background-color: tan;
   }
 
   #input-margins {
@@ -46,7 +47,7 @@
   }
 
   .checkbox-div {
-    background-color: olive;
+    // background-color: olive;
     width: 180px;
     height: 40px;
     top: 12px;
@@ -118,36 +119,40 @@
       font-size: 20px;
       font-family: $font;
       margin: 0 auto;
-      bottom: 135px;
+      // bottom: 135px;
+      bottom: 62px;
     }
     .make-user-title {
       z-index: 1;
       right: 0px;
       margin-top: 1px;
       margin-bottom: -7px;
-      bottom: 75px;
+      font-size: 40px;
+      // bottom: 75px;
+      bottom: 13px;
     }
     .make-user-container {
       width: 340px;
-      height: 219px;
+      height: 174px;
+      top: 60px;
     }
     #input-margins {
       width: 340px;
-      margin-top: 20px;
+      margin-top: 5px;
     }
     .ifield-container {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      bottom: 75px;
+      // bottom: 75px;
+      bottom: 54px;
     }
     .checkbox-div {
       margin-left: 168px;
       top: 0px;
-      bottom: 5px;
+      // bottom: 5px;
+      bottom: -5px;
+
     }
-
   }
-
-
 }
