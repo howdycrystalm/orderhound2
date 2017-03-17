@@ -33,6 +33,7 @@
     "gulp-uglify": "^2.0.1",
     "gulp-watch": "^4.3.11",
     "massive": "^2.6.0",
+    "moment": "^2.17.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
   }
