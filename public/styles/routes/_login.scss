@@ -109,7 +109,7 @@
     margin-bottom: 15px;
     // background-color: grey;
   }
-  
+
   input {
     @include input();
   }
@@ -277,6 +277,10 @@
     @media (max-width: 550px) {
       #horizontal{
         display: none;
+      }
+
+      .all {
+        overflow-y: hidden;
       }
       .login {
         display: none;

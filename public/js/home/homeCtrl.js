@@ -8,30 +8,38 @@ angular.module('houndApp')
 
   $scope.addpo = function (ponum) {
     homeService.addpo(ponum).then(function (response) {
-      alert("PO added successfully");
+      // alert("PO added successfully");
+      swal({
+        title: "PO added successfully!",
+        type: "success",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#1EB11E"
+      });
       $state.reload('home');
     })
   };
 
-  $scope.login = function(user) {
-    mainService.login(user)
-    .then(function(response) {
-      if (!response.data) {
-        $scope.user.password = "";
-        return alert('user could not be logged in');
-      }
-      else if (response.data.admin === 'true') {
-        $state.go('adminHome')
-      }
-      else {
-        $state.go('home')
-      }
-      console.log(response.data.admin);
-    }).catch(function(err) {
-      $scope.user.password = "";
-      alert('user could not be logged in');
-    });
-  };
+  // $scope.login = function(user) {
+  //   mainService.login(user)
+  //   .then(function(response) {
+  //     if (!response.data) {
+  //       $scope.user.password = "";
+  //       // return alert('user could not be logged in');
+  //       return swal("Bad job!", "cant login!", "error");
+  //     }
+  //     else if (response.data.admin === 'true') {
+  //       $state.go('adminHome')
+  //     }
+  //     else {
+  //       $state.go('home')
+  //     }
+  //     console.log(response.data.admin);
+  //   }).catch(function(err) {
+  //     $scope.user.password = "";
+  //     // alert('user could not be logged in');
+  //     swal("Bad job!", "cant login!", "error");
+  //   });
+  // };
 
   $scope.logout = function() {
     mainService.logout().then(function(response) {
