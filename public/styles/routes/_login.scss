@@ -138,6 +138,15 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  /////////////////////////// LEARN MORE / REGISTER ///////////////////////////
+  h2:before {
+    display: block;
+    content: " ";
+    margin-top: -285px;
+    height: 285px;
+    visibility: hidden;
+  }
   /////////////////////////// LAYOUT ///////////////////////////
   .container {
     position: relative;
