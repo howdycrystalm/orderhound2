@@ -55,7 +55,15 @@ angular.module('houndApp').controller('loginCtrl', function($scope, mainService,
           confirmButtonColor: "#153975"
         });
       }
-      alert(response.data);
+      // alert(response.data);
+      swal({
+        title: "Registration Successful",
+        text: "You're ready to login as Admin.",
+        type: "success",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#153975"
+      });
+      $state.reload('login');
     }).catch(function(err) {
       return swal({
         title: "Can't Register Admin",
