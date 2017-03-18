@@ -14,7 +14,14 @@ angular.module('houndApp').controller('loginCtrl', function($scope, mainService,
     .then(function(response) {
       if (!response.data) {
         $scope.user.password = "";
-        return alert('user could not be logged in');
+        // return alert('user could not be logged in');
+        return swal({
+          title: "You shall not pass!",
+          text: "Incorrect email or password",
+          type: "error",
+          confirmButtonText: "Try Again!",
+          confirmButtonColor: "#153975"
+        });
       }
       else if (response.data.admin === 'true') {
         $state.go('adminHome')
@@ -25,7 +32,14 @@ angular.module('houndApp').controller('loginCtrl', function($scope, mainService,
       console.log(response.data.admin);
     }).catch(function(err) {
       $scope.user.password = "";
-      alert('user could not be logged in');
+      // alert('user could not be logged in');
+      swal({
+        title: "You shall not pass!",
+        text: "Incorrect email or password",
+        type: "error",
+        confirmButtonText: "Try Again!",
+        confirmButtonColor: "#153975"
+      });
     });
   };
 
@@ -33,11 +47,23 @@ angular.module('houndApp').controller('loginCtrl', function($scope, mainService,
     mainService.register(newUser)
     .then(function(response) {
       if (response.data !== "User created successfully!") {
-        return alert("Could not register user");
+        return swal({
+          title: "Can't Register Admin",
+          text: "Admin or business is already registered.",
+          type: "error",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#153975"
+        });
       }
       alert(response.data);
     }).catch(function(err) {
-      return alert("Could not register user");
+      return swal({
+        title: "Can't Register Admin",
+        text: "Admin or business is already registered.",
+        type: "error",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#153975"
+      });
     });
   };
 });
