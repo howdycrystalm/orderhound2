@@ -79,6 +79,12 @@
   }
 
   //***************************************
+@media (min-width: 861px){
+  .create-user-button2 {
+    display: none;
+  }
+}
+
   @media (max-width: 860px) {
     .create-user-button2 {
       display: none;
