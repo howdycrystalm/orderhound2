@@ -108,6 +108,6 @@ app.put('/api/user/current', isAuthed, authCtrl.update);
 
 
 // CONNECTIONS //
-app.listen(config.PORT, function() {
-  console.log('Listening on port ', config.PORT);
+app.listen(config.serverPort, function() {
+  console.log('Listening on port ', config.serverPort);
 })
