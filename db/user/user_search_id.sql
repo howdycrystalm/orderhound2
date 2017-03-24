@@ -1,2 +1,2 @@
-SELECT * FROM users
+SELECT * FROM users2
 WHERE id = $1
