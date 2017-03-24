@@ -60,7 +60,7 @@
     @include flex(center, center);
     font-size: 20px;
     font-family: $font;
-    margin-top: 25px;
+    bottom: 30px;
   }
 
   .create-user-button:hover {
@@ -76,6 +76,19 @@
 
   .create-user-button2:focus {
     outline: 0;
+  }
+
+  .home-button {
+    @include wxh(50px, 50px);
+    // background-color: black;
+    color: $dark-grey;
+    font-size: 48px;
+    bottom: 65px;
+    left: 17px;
+  }
+
+  .home-button:hover {
+    color:$off-white;
   }
 
   //***************************************
