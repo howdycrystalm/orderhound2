@@ -86,7 +86,7 @@
 
   .panel {
     background-color: $off-white;
-    max-height: 0;
+    max-height: 0px;
     overflow: hidden;
     display: inline-flex;
     transition: max-height 0.2s ease-out;
@@ -227,12 +227,13 @@
         display: inline-block;
         width: 106px;
         height: 100%;
-        padding: 10px 5px 10px 8px;
+        padding: 8px 5px 8px 8px;
       }
       input {
         @include input();
         @include wxh(210px, 53px);
         margin-top: 0;
+        border: 1px solid #efe9e9;
       }
       i {
         font-size: 18px;
@@ -245,6 +246,7 @@
       }
       .panel {
         align-items: center;
+        max-height: 53px;
       }
       button.accordion {
         width: 211px;
