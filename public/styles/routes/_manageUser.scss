@@ -80,15 +80,14 @@
 
   .home-button {
     @include wxh(50px, 50px);
-    // background-color: black;
-    color: $dark-grey;
+    color: $off-white;
     font-size: 48px;
     bottom: 65px;
     left: 17px;
   }
 
   .home-button:hover {
-    color:$off-white;
+    color:$light-green;
   }
 
   //***************************************
