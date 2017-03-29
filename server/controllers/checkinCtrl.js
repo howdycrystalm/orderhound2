@@ -1,13 +1,14 @@
 /*allows users to add the po, aka 'check-in' the po they're working on*/
 var app = require('./../index')
-var moment = require('moment');
+var moment = require('moment-timezone');
+
 var db = app.get('db');
 
 module.exports = {
   update_po_location: function(req, res, next) {
-
-
-    var date = moment().format('MMMM Do YYYY, h:mm:ss a');
+    
+    var guessUserTimeZone = moment.tz.guess();
+    var date = moment().tz(guessUserTimeZone).format('MMMM Do YYYY, h:mm:ss a')
     db.track_po.initial_add_po([date, Number(req.body.ponumber), req.user.name, req.user.checkpoint, req.user.photo], function (err, response) {//gets from homeService.js
 
       // db.doespoexist([Number(req.body.ponumber)], function (err, response) {//gets from homeService.js
