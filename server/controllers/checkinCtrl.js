@@ -1,5 +1,5 @@
-/*allows users to add the po, aka 'check-in' the po they're working on*/		
-var app = require('./../index')
+/*allows users to add the po, aka 'check-in' the po they're working on*/
+var app = require('./../index');
 var moment = require('moment-timezone');
 
 var db = app.get('db');
