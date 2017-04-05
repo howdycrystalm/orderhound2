@@ -9,8 +9,8 @@ module.exports = {
   update_po_location: function(req, res, next) {
 
     var guessUserTimeZone = moment.tz.guess();
-    var date = moment().tz.guess().format('MMMM Do YYYY, h:mm:ss a')
-    // var date = moment().tz('America/Los_Angeles').format('MMMM Do YYYY, h:mm:ss a');
+    // var date = moment().tz.guess().format('MMMM Do YYYY, h:mm:ss a')
+    var date = moment().tz(guessUserTimeZone).format('MMMM Do YYYY, h:mm:ss a');
 
     // var date = moment().format('MMMM Do YYYY, h:mm:ss a');
     db.track_po.initial_add_po([date, Number(req.body.ponumber), req.user.name, req.user.checkpoint, req.user.photo], function (err, response) {//gets from homeService.js
